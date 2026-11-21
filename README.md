@@ -25,7 +25,7 @@ Here $\lambda(p^k)=\log p$ for a prime $p$ and integer $k\ge1$, and $\lambda(q)=
 | Arithmetic inversion | Calibration at 2 recovers $\Lambda(n)$ uniformly on a growing integer range, with a quantitative stability bound | §§2, 6 |
 | Finite observations | Enclosed values of the measured joint sign frequency on two finite base ranges, obtained by sieving prime powers and integrating on every count cell | §8 |
 
-At zero lag, put $b=e^h$. The Mellin transform $H_b$ of the ordinary-prime window satisfies $|H_b(1/2+i\gamma)|=\sqrt b\,|b_h(\gamma)|^2$, so the sum $L_b$ of its absolute values over the zeros gives $V_h=L_b/\sqrt b$. For $1<b\le2$ this yields
+At zero lag put $`b=e^h`$. On the critical line, the Mellin transform $`H_b`$ of the ordinary-prime window satisfies $`\lvert H_b(1/2+i\gamma)\rvert=\sqrt{b}\,\lvert b_h(\gamma)\rvert^2`$. Summing over the nontrivial zeros with multiplicity gives the canonical variance $`V_h=L_b/\sqrt{b}`$. For $`1\lt b\le2`$ the formula becomes
 
 $$
 V_h=(b+1)\log(b+1)-(b-1)\log(b-1)+2(b-1)\log b-2b\log 2-(b-1)(\gamma_E+\log\pi).
@@ -33,7 +33,7 @@ $$
 
 The finite-width expression comes from [Crossley’s prime-window formula](https://doi.org/10.5281/zenodo.24416358). Expanding at $h=0$ gives $c_0=1-\gamma_E-\log(2\pi)$ in §4, where $\gamma_E$ is Euler’s constant. Leung gives this coefficient in [Proposition 2.2](https://arxiv.org/html/2401.04000#S2.Ex9).
 
-**中文摘要**　两个短区间的左端点相差一个倍率。只记每个窗口中的加权素数计数有没有超过区间长度，两个窗口同时超额的极限频率便包含这个倍率的算术信息。在文中给出的零点独立性和例外集条件下，倍率 2、4 的首项分别携带 $\log 2/\sqrt{2}$、$(\log 2)/2$，倍率 6 的首项为零。以 2 为参照可以在增长区间上一致恢复冯·曼戈尔特函数。正文给出有限高度的实际计数，展示有限观测与有序极限的差别。
+**中文摘要**　两个短区间的左端点相差一个倍率。只记每个窗口中的加权素数计数有没有超过区间长度，两个窗口同时超额的极限频率便包含这个倍率的算术信息。在文中给出的零点独立性和例外集条件下，倍率 2、4 的首项分别携带 $`\log 2/\sqrt{2}`$、 $`(\log 2)/2`$，倍率 6 的首项为零。以 2 为参照可以在增长区间上一致恢复冯·曼戈尔特函数。正文给出有限高度的实际计数，展示有限观测与有序极限的差别。
 
 ## Reproduce the computations
 
