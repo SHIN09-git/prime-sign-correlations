@@ -31,7 +31,7 @@ $$
 V_h=(b+1)\log(b+1)-(b-1)\log(b-1)+2(b-1)\log b-2b\log 2-(b-1)(\gamma_E+\log\pi).
 $$
 
-Expanding at $h=0$ gives $c_0=1-\gamma_E-\log(2\pi)$ in §4, where $\gamma_E$ is Euler’s constant. [Crossley, *Ordinary-prime windows*](https://doi.org/10.5281/zenodo.24416358).
+The finite-width expression comes from [Crossley’s prime-window formula](https://doi.org/10.5281/zenodo.24416358). Expanding at $h=0$ gives $c_0=1-\gamma_E-\log(2\pi)$ in §4, where $\gamma_E$ is Euler’s constant. Leung gives this coefficient in [Proposition 2.2](https://arxiv.org/html/2401.04000#S2.Ex9).
 
 **中文摘要**　两个短区间的左端点相差一个倍率。只记每个窗口中的加权素数计数有没有超过区间长度，两个窗口同时超额的极限频率便包含这个倍率的算术信息。在文中给出的零点独立性和例外集条件下，倍率 2、4 的首项分别携带 $\log 2/\sqrt{2}$、$(\log 2)/2$，倍率 6 的首项为零。以 2 为参照可以在增长区间上一致恢复冯·曼戈尔特函数。正文给出有限高度的实际计数，展示有限观测与有序极限的差别。
 
