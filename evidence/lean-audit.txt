@@ -1,0 +1,48 @@
+@PrimeSigns.window_overlap : ∀ {h t : ℝ},
+  |t| ≤ h → ∫ (u : ℝ) in 0..h - |t|, Real.exp (u + |t| / 2) = PrimeSigns.window h t
+@PrimeSigns.isolate_atom : ∀ {ι : Type u_1} [DecidableEq ι] (s : Finset ι),
+  ∀ i ∈ s,
+    ∀ (a w : ι → ℝ) {h : ℝ},
+      0 ≤ h →
+        (∀ j ∈ s, j ≠ i → h < |a j - a i|) → ∑ j ∈ s, w j * PrimeSigns.window h (a j - a i) = w i * (Real.exp h - 1)
+PrimeSigns.window_profile : ∀ (τ : ℝ),
+  Filter.Tendsto (fun h => PrimeSigns.window h (τ * h) / h) (nhdsWithin 0 (Set.Ioi 0)) (nhds (max (1 - |τ|) 0))
+@PrimeSigns.two_excess_cell : ∀ {a b x d q s t : ℝ},
+  0 < d → 0 < q → (a ≤ x ∧ x < b ∧ d * x < s ∧ q * d * x < t ↔ a ≤ x ∧ x < min b (min (s / d) (t / (q * d))))
+PrimeSigns.fixed_lag_inverse : ∀ (q τ weight : ℝ) (K V B d : ℝ → ℝ),
+  (∀ᶠ (h : ℝ) in nhdsWithin 0 (Set.Ioi 0), K h = B h - weight / √q * PrimeSigns.window h (τ * h)) →
+    Filter.Tendsto (fun h => B h / h) (nhdsWithin 0 (Set.Ioi 0)) (nhds 0) →
+      Filter.Tendsto (fun h => h * Real.log (1 / h) / V h) (nhdsWithin 0 (Set.Ioi 0)) (nhds 1) →
+        Filter.Tendsto (fun h => K h / V h) (nhdsWithin 0 (Set.Ioi 0)) (nhds 0) →
+          Filter.Tendsto (fun h => Real.log (1 / h) * (d h - (1 / 4 + Real.arcsin (K h / V h) / (2 * Real.pi))))
+              (nhdsWithin 0 (Set.Ioi 0)) (nhds 0) →
+            Filter.Tendsto (fun h => 2 * Real.pi * Real.log (1 / h) * (1 / 4 - d h)) (nhdsWithin 0 (Set.Ioi 0))
+              (nhds (weight / √q * max (1 - |τ|) 0))
+@PrimeSigns.calibration_error : ∀ {c b t a z ea ez : ℝ},
+  0 < c →
+    0 < b → ea ≤ c * b / 2 → |a - c * b| ≤ ea → |z - c * t| ≤ ez → |b * z / a - t| ≤ 2 * (b * ez + |t| * ea) / (c * b)
+@PrimeSigns.detect_prime_power : ∀ {n : ℕ},
+  2 ≤ n →
+    ∀ {estimate : ℝ},
+      |estimate - ArithmeticFunction.vonMangoldt n| < Real.log 2 / 2 → (Real.log 2 / 2 < estimate ↔ IsPrimePow n)
+@PrimeSigns.detect_prime : ∀ {n : ℕ},
+  2 ≤ n →
+    ∀ {estimate : ℝ},
+      |estimate - ArithmeticFunction.vonMangoldt n| < Real.log 2 / 4 → (3 * Real.log ↑n / 4 < estimate ↔ Nat.Prime n)
+'PrimeSigns.window_overlap' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PrimeSigns.window_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PrimeSigns.window_outside' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PrimeSigns.window_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PrimeSigns.window_edge' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PrimeSigns.isolate_atom' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PrimeSigns.window_profile' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PrimeSigns.two_excess_cell' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PrimeSigns.exact_sign_inversion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PrimeSigns.sign_first_order' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PrimeSigns.gaussian_quadrant_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PrimeSigns.fixed_lag_inverse' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PrimeSigns.calibration_error' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PrimeSigns.prime_power_gap' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PrimeSigns.nonprime_weight_le_half' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PrimeSigns.detect_prime_power' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PrimeSigns.detect_prime' depends on axioms: [propext, Classical.choice, Quot.sound]

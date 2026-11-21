@@ -1,0 +1,137 @@
+{
+  "quantity": "canonical K_h(log n + tau*h)",
+  "h": "1/32",
+  "endpoint_scale": 1000000000,
+  "precision_bits": 192,
+  "panels_each_side": 1024,
+  "truncation": 20000,
+  "positive_ordinates": 22491,
+  "source_sha256": "33be171305b7d3237d68eecd3efb0aa34d967a1db78871e0a400549db4fe7a13",
+  "rational_bracket_sha256": "4c34dc77993cf26ca8efd2f53699d9afa85226af193c3566afcca5ec023db67f",
+  "tail_bound": [
+    953291,
+    953292
+  ],
+  "fresh_hardy_signs": true,
+  "flint": "3.6.0",
+  "python_flint": "0.9.0",
+  "rows": [
+    {
+      "n": 2,
+      "tau": "0",
+      "direct": [
+        -14390689,
+        -14388362
+      ],
+      "spectral": [
+        -15326927,
+        -13420343
+      ],
+      "common_sign": "-"
+    },
+    {
+      "n": 2,
+      "tau": "1/2",
+      "direct": [
+        -6589032,
+        -6586662
+      ],
+      "spectral": [
+        -7541086,
+        -5634502
+      ],
+      "common_sign": "-"
+    },
+    {
+      "n": 2,
+      "tau": "1",
+      "direct": [
+        1211609,
+        1214020
+      ],
+      "spectral": [
+        251553,
+        2158137
+      ],
+      "common_sign": "+"
+    },
+    {
+      "n": 3,
+      "tau": "0",
+      "direct": [
+        -18489437,
+        -18486188
+      ],
+      "spectral": [
+        -19420590,
+        -17514005
+      ],
+      "common_sign": "-"
+    },
+    {
+      "n": 4,
+      "tau": "0",
+      "direct": [
+        -9052471,
+        -9048626
+      ],
+      "spectral": [
+        -9992653,
+        -8086068
+      ],
+      "common_sign": "-"
+    },
+    {
+      "n": 6,
+      "tau": "0",
+      "direct": [
+        2415891,
+        2420653
+      ],
+      "spectral": [
+        1464995,
+        3371580
+      ],
+      "common_sign": "+"
+    },
+    {
+      "n": 8,
+      "tau": "0",
+      "direct": [
+        -4981763,
+        -4976249
+      ],
+      "spectral": [
+        -5924377,
+        -4017792
+      ],
+      "common_sign": "-"
+    },
+    {
+      "n": 9,
+      "tau": "0",
+      "direct": [
+        -8655682,
+        -8649831
+      ],
+      "spectral": [
+        -9594196,
+        -7687611
+      ],
+      "common_sign": "-"
+    },
+    {
+      "n": 10,
+      "tau": "0",
+      "direct": [
+        3130666,
+        3136836
+      ],
+      "spectral": [
+        2180422,
+        4087006
+      ],
+      "common_sign": "+"
+    }
+  ]
+}

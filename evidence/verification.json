@@ -1,0 +1,68 @@
+{
+  "release_date": "2026-11-22",
+  "byline": [
+    "GPT-6.2 Astra",
+    "JIN HANZHE"
+  ],
+  "paper": {
+    "english_pages": 9,
+    "chinese_pages": 9,
+    "typst": "0.15.2",
+    "vector_figure": "paper/trace.svg"
+  },
+  "proof_check": {
+    "lean": "4.24.0",
+    "mathlib": "f897ebcf72cd16f89ab4577d0c826cd14afaafc7",
+    "lean4checker": "da26eb05e9959402afcb9bd6dfe5dc4f700f70d6",
+    "clean_project_build": "passed",
+    "replayed_project_modules": [
+      "PrimeSigns",
+      "PrimeSigns.Calibration",
+      "PrimeSigns.Detection",
+      "PrimeSigns.Inverse",
+      "PrimeSigns.Limits",
+      "PrimeSigns.Window"
+    ],
+    "audited_theorems": [
+      "PrimeSigns.window_overlap",
+      "PrimeSigns.window_nonneg",
+      "PrimeSigns.window_outside",
+      "PrimeSigns.window_zero",
+      "PrimeSigns.window_edge",
+      "PrimeSigns.isolate_atom",
+      "PrimeSigns.window_profile",
+      "PrimeSigns.two_excess_cell",
+      "PrimeSigns.exact_sign_inversion",
+      "PrimeSigns.sign_first_order",
+      "PrimeSigns.gaussian_quadrant_limit",
+      "PrimeSigns.fixed_lag_inverse",
+      "PrimeSigns.calibration_error",
+      "PrimeSigns.prime_power_gap",
+      "PrimeSigns.nonprime_weight_le_half",
+      "PrimeSigns.detect_prime_power",
+      "PrimeSigns.detect_prime"
+    ],
+    "axioms_observed": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "analytic_inputs": "The zeta explicit formula, variance scaling and probabilistic comparison are proved in the paper; fixed_lag_inverse accepts their consequences as hypotheses."
+  },
+  "computations": {
+    "python": "3.12.10",
+    "python_flint": "0.9.0",
+    "flint": "3.6.0",
+    "covariance_cases": 9,
+    "baseline_bits": 160,
+    "repeat_bits": 192,
+    "positive_zeros_below_20000": 22491,
+    "hardy_endpoint_signs_reevaluated": 44984,
+    "finite_height_cases": 6,
+    "finite_count_cells": 177598,
+    "independent_midpoint_count_checks": 1390,
+    "finite_baseline_bits": 160,
+    "finite_repeat_bits": 192,
+    "finite_intervals_at_both_precisions": "identical on the outward decimal grid"
+  }
+}

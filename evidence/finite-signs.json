@@ -1,0 +1,134 @@
+{
+  "quantity": "finite logarithmic frequencies of actual weighted prime-count excesses",
+  "window_ratio": "33/32",
+  "endpoint_scale": 1000000000,
+  "precision_bits": 160,
+  "rows": [
+    {
+      "q": 2,
+      "base": [
+        512,
+        16384
+      ],
+      "constant_count_cells": 10611,
+      "separate_count_checks": 84,
+      "first": [
+        483971242,
+        483971243
+      ],
+      "second": [
+        493749626,
+        493749627
+      ],
+      "joint": [
+        181675412,
+        181675413
+      ]
+    },
+    {
+      "q": 4,
+      "base": [
+        512,
+        16384
+      ],
+      "constant_count_cells": 16499,
+      "separate_count_checks": 130,
+      "first": [
+        483971242,
+        483971243
+      ],
+      "second": [
+        492751585,
+        492751586
+      ],
+      "joint": [
+        212266375,
+        212266376
+      ]
+    },
+    {
+      "q": 6,
+      "base": [
+        512,
+        16384
+      ],
+      "constant_count_cells": 22139,
+      "separate_count_checks": 174,
+      "first": [
+        483971242,
+        483971243
+      ],
+      "second": [
+        500109275,
+        500109276
+      ],
+      "joint": [
+        254054489,
+        254054490
+      ]
+    },
+    {
+      "q": 2,
+      "base": [
+        16384,
+        65536
+      ],
+      "constant_count_cells": 27280,
+      "separate_count_checks": 214,
+      "first": [
+        502830557,
+        502830558
+      ],
+      "second": [
+        485293419,
+        485293420
+      ],
+      "joint": [
+        190440169,
+        190440170
+      ]
+    },
+    {
+      "q": 4,
+      "base": [
+        16384,
+        65536
+      ],
+      "constant_count_cells": 42997,
+      "separate_count_checks": 336,
+      "first": [
+        502830557,
+        502830558
+      ],
+      "second": [
+        504007588,
+        504007589
+      ],
+      "joint": [
+        240567383,
+        240567384
+      ]
+    },
+    {
+      "q": 6,
+      "base": [
+        16384,
+        65536
+      ],
+      "constant_count_cells": 58072,
+      "separate_count_checks": 452,
+      "first": [
+        502830557,
+        502830558
+      ],
+      "second": [
+        497480716,
+        497480717
+      ],
+      "joint": [
+        226125132,
+        226125133
+      ]
+    }
+  ]
+}
