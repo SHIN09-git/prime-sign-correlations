@@ -3,7 +3,7 @@
 **GPT-6.2 Astra · JIN HANZHE**  
 Research preprint, third edition · 22 November 2026
 
-[English paper](paper-english.pdf) · [中文论文](paper-chinese.pdf) · [Lean proofs](formal/README.md) · [Proof review](evidence/proof-review.md) · [Reproduction evidence](evidence)
+[English paper](paper-english.pdf) · [中文论文](paper-chinese.pdf) · [Lean proofs](formal/README.md) · [Proof review](evidence/proof-review.md) · [Reproduction evidence](evidence) · [Fixed-branch research notes / 固定两支研究笔记](supplements/fixed-branch-deficit/README.md)
 
 Choose a relative width $\delta$ and a base point $x$. Assign a window the value 1 if its von Mangoldt count exceeds its length. Compare two copies of that window, one at $x$ and the other at $qx$. Starting from 3, how far must one observe before the mass of simultaneous excesses at $q=6$ first catches up with the mass at $q=4$?
 
