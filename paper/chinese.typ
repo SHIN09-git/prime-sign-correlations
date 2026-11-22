@@ -1,8 +1,8 @@
 #import "layout.typ": *
 #import "equations.typ" as eq
-#show: layout.with("zh","从短区间素数误差的符号相关性恢复素数幂","短区间素数误差的符号相关性")
+#show: layout.with("zh","短区间素数计数的符号相关与首次反转","素数符号相关与首次反转")
 
-#text(weight:"bold")[摘要　] 对左端点之比为 $q>1$ 的两个短区间，只记录各自的加权素数计数是否超过区间长度。先沿左端点作对数平均，再令相对区间宽度趋零。本文证明，两个计数同时超额的概率偏离 $1/4$ 的一阶项恰在素数幂倍率出现。若 $q=p^k$，系数为 $-(log p)/(2pi sqrt(q))$。偏移窗口宽度的一定比例，系数按三角形轮廓变化。以倍率 2 作一次校准，可在增长的整数范围上一致恢复 von Mangoldt 函数。符号定理对零点纵坐标提出附加独立性假设，允许定量受控的例外集合。按重数计算的谱核具有精确迹公式，仅用黎曼定理和经典显式公式。
+#text(weight:"bold")[摘要　] 从同一点开始累计，倍率 4 与 6 的两个短区间同时超额的频率，何时第一次改变排序？设相对宽度为 $delta$，$M=1/(6delta)$。本文无条件证明，在 $M+c sqrt(M)(log M)^(3/2)$ 前不会追平。若存在同阶上界，则每个相应短区间都必须含有定量多个使 $6p+1$ 或 $6p-1$ 为素数的素数 $p$。精确的首次追平常数与该短区间素数对渐近律等价。该等价性对典型起点同样成立，一个固定距离上的平均读数还可刻画全局素数对律。对指定的仿射素数元组，另选一个有限高度的观测方案，还可从单一联合符号频率反推完整计数渐近式。在窗口包含许多整数的尺度，本文用有限零点频带中精确和近似关系的显式误差控制素数幂系数。
 
 = 两个相距很远的窗口
 记 $psi(x)=sum_(n<=x)Lambda(n)$。若 $n=p^k$，其中 $p$ 为素数、$k>=1$，则 $Lambda(n)=log p$。其余整数的权重为零。对 $0<h<1$ 定义
@@ -13,7 +13,7 @@
 
 #lead[定理 1。][在第 2 节的零点假设下，@density 的极限存在。对每个固定实数 $q>1$，当实数 $tau$ 位于有界集时，一致地有]
 #eq.inverse
-这里 $u_+=max(u,0)$。例如倍率 2 和 4 分别给出 $(log 2)/sqrt(2)$ 和 $(log 2)/2$，倍率 6 的一阶系数为零。定理涉及两个有先后次序的极限。测量某个密度达到指定精度所需的采样长度仍待估计。
+这里 $u_+=max(u,0)$。例如倍率 2 和 4 分别给出 $(log 2)/sqrt(2)$ 和 $(log 2)/2$，倍率 6 的一阶系数为零。定理 4–6 分别给出首次追平下界、素数元组的逆定理和有限高度的误差估计。
 
 #pagebreak()
 = 零点假设与一致恢复
@@ -89,7 +89,7 @@ $ w_h(tau h)=h(1-abs(tau))_++O(h^2). $
 $ K_h(log n)=-(e^h-1)Lambda(n)/sqrt(n)+O(h^2 sqrt(n)). $ <isolated>
 因为 $Lambda(n)/sqrt(n)<<1$，由 @variance，当 $h$ 充分小时，整个整数范围上的 $abs(K_h(log n))/V_h$ 都小于 $1/2$。取 @calibration 中的正弦恰好抵消高斯反正弦。用正弦的 Lipschitz 界传递 @model 的误差，得到
 #eq.bound
-式 @isolated 确定了负号。特别地，$S_h(2)/c_h=(log 2)/sqrt(2)+O(sqrt(h L)+J_h/h+h)$ 最终为正。置 $A_n=sqrt(n)S_h(n)/c_h$，则 $hat(Lambda)_h(n)=(log 2)A_n/A_2$。利用恒等式
+@isolated 确定了负号。特别地，$S_h(2)/c_h=(log 2)/sqrt(2)+O(sqrt(h L)+J_h/h+h)$ 最终为正。置 $A_n=sqrt(n)S_h(n)/c_h$，则 $hat(Lambda)_h(n)=(log 2)A_n/A_2$。利用恒等式
 $ (log 2)A_n-Lambda(n)A_2=(log 2)(A_n-Lambda(n))-Lambda(n)(A_2-log 2) $
 以及 $Lambda(n)<=log n<<sqrt(N)$，即得 @uniform，定理 2 得证。输入密度变化 $eta$ 至多使 $S_h$ 变化 $2pi eta$，再除以 $c_h$ 最多放大 $O(L)$ 倍，就得到前述稳定性界。
 
@@ -131,12 +131,16 @@ caption:[实际计数同时超额的频率，表中保留六位小数。随稿�
 倍率 6 的偏差 $F_6(A,B)-1/4$ 在两个范围内符号相反。在较高的范围里，倍率 6 的频率甚至低于素数幂倍率 4。因此，只看单个有限范围内观测频率的高低，可能会得到与极限一阶系数不同的排序。这说明研究达到指定精度所需的观测长度有实际意义。
 
 #pagebreak()
+#include "first-passage-zh.typ"
+#include "inverse-scales-zh.typ"
 = 与已有工作的关系及参考文献
-Montgomery 和 Soundararajan [2] 研究了观测高度和区间长度共同变化时的短区间素数高斯分布。Leung [1] 在 RH 与 LI 下得到了邻近短区间的联合高斯律与次阶负相关。他的中心位移参数 $t$ 以窗口宽度为单位，定理 3.1 将中心参数的最大尺度限制在 $delta^(-1/10)$ 以内。本文固定倍率时，该参数为 $1/h$ 量级，此时 @trace 中的离散素数项进入主项。Landau 的指数和早已能从零点的线性统计量识别素数幂倍率 [10，式 (1.1)]。Suzuki [3] 在二次积分的 zeta 显式公式中已经写出了素数幂项。分布公式 @distribution 与高斯反正弦公式均为经典结果。本文研究相距固定倍率的两个计数仅保留正负号后能恢复什么，并估计可同时恢复的整数范围与输入误差。
+Montgomery 和 Soundararajan [2] 研究了观测高度和区间长度共同变化时的短区间素数高斯分布。Leung [1] 在 RH 与 LI 下得到了邻近短区间的联合高斯律与次阶负相关。他的中心位移参数 $t$ 以窗口宽度为单位，定理 3.1 将中心参数的最大尺度限制在 $delta^(-1/10)$ 以内。本文固定倍率时，该参数为 $1/h$ 量级，此时 @trace 中的离散素数项进入主项。Landau 的指数和早已能从零点的线性统计量识别素数幂倍率 [10，式 (1.1)]。Suzuki [3] 在二次积分的 zeta 显式公式中已经写出了素数幂项。@distribution 的分布恒等式与高斯反正弦公式均为经典结果。本文研究相距固定倍率的两个计数仅保留正负号后能恢复什么，并估计可同时恢复的整数范围与输入误差。
 
-符号定理使用有次序的两重极限。去掉符号观测量的独立性前提，或给出 $h$ 与 $Y$ 同时变化时的定量结论，均是更强的开放方向。精确谱核公式及第 4 节的实际协方差重数修正仅用黎曼定理。配套 Lean 工程核验窗口极限、正弦统计量的一阶转换、校准误差、两种算术阈值及第 8 节的分段不等式，并从迹公式、方差尺度及高斯比较三个解析输入推出固定倍率的反演极限。零点展开及提供这些输入的概率估计由正文证明。本稿为公开预印本，尚待独立同行评审。
+第 3–4 节的精确迹公式及重数修正使用黎曼定理。定理 4 的下界和定理 5 的等价性仅用初等算术与筛法。首次追平的精确常数取决于局部素数对定律，同时极限下的谱系数需要控制有限频带的共振和。本文留下的开放问题是在实际素数或零点上证明这些前提。Lean 工程核验由解析输入推出固定倍率极限的推导、窗口与整数几何、反演、从极限曲线推出首次追平位置的环节，以及此处斜坡核的傅里叶积分在全实轴上非零。筛法、仿射渐近式和概率比较的证明见正文。本稿尚待独立同行评审。
 
 #sub[参考文献]
+#set text(size:8.9pt)
+#set par(spacing:.26em,leading:.43em)
 [1] S.-K. Leung. Joint distribution of primes in multiple short intervals. _Advances in Mathematics_（2026）。#link("https://arxiv.org/abs/2401.04000")[arXiv:2401.04000]。
 
 [2] H. L. Montgomery, K. Soundararajan. Primes in short intervals. _Comm. Math. Phys._ *252*（2004），589–617。#link("https://doi.org/10.1007/s00220-004-1222-4")[期刊论文]。
@@ -158,3 +162,13 @@ Montgomery 和 Soundararajan [2] 研究了观测高度和区间长度共同变�
 [10] K. Ford 与 A. Zaharescu。On the distribution of imaginary parts of zeros of the Riemann zeta function。_J. reine angew. Math._ *579*（2005），145–158。#link("https://arxiv.org/abs/math/0405459")[论文]。
 
 [11] G. Martin 与 N. Ng。Inclusive prime number races。#link("https://arxiv.org/abs/1710.00088")[arXiv:1710.00088]。
+
+[12] S. L. Aletheia-Zomlefer、L. Fukshansky 与 S. R. Garcia。The Bateman–Horn conjecture. Heuristics, history, and applications。_Expo. Math._ #link("https://doi.org/10.1016/j.exmath.2019.04.005")[期刊]。
+
+[13] P. X. Gallagher。On the distribution of primes in short intervals。_Mathematika_ *23*（1976），4–9。#link("https://doi.org/10.1112/S0025579300016442")[期刊]。
+
+[14] Y. Lamzouri。An effective Linear Independence conjecture for the zeros of the Riemann zeta function and applications。#link("https://arxiv.org/abs/2311.04860")[arXiv:2311.04860]。
+
+[15] N. Wiener. Tauberian theorems. _Ann. of Math._ *33* (1932), 1–100. #link("https://doi.org/10.2307/1968102")[DOI].
+
+[16] K. Ford. _Sieve Methods_, course notes (2023), Selberg’s sieve. #link("https://ford126.web.illinois.edu/sieve2023.pdf")[PDF].

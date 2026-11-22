@@ -1,0 +1,292 @@
+{
+  "bits": 128,
+  "method": "contiguous",
+  "block_size": 262144,
+  "ordinate_scale": 1000000000,
+  "profiles": [
+    {
+      "M": 268435456,
+      "M_exponent": 28,
+      "points": [
+        {
+          "z_grid": "0",
+          "base_height": 268435456,
+          "normalized_lead": [
+            1391170217,
+            1391170218
+          ]
+        },
+        {
+          "z_grid": "1/16",
+          "base_height": 268523009,
+          "normalized_lead": [
+            1381019815,
+            1381019816
+          ]
+        },
+        {
+          "z_grid": "1/8",
+          "base_height": 268610563,
+          "normalized_lead": [
+            1352181769,
+            1352181770
+          ]
+        },
+        {
+          "z_grid": "3/16",
+          "base_height": 268698117,
+          "normalized_lead": [
+            1306511091,
+            1306511092
+          ]
+        },
+        {
+          "z_grid": "1/4",
+          "base_height": 268785671,
+          "normalized_lead": [
+            1241021357,
+            1241021358
+          ]
+        },
+        {
+          "z_grid": "5/16",
+          "base_height": 268873225,
+          "normalized_lead": [
+            1155848719,
+            1155848720
+          ]
+        },
+        {
+          "z_grid": "3/8",
+          "base_height": 268960779,
+          "normalized_lead": [
+            1049286957,
+            1049286958
+          ]
+        },
+        {
+          "z_grid": "7/16",
+          "base_height": 269048332,
+          "normalized_lead": [
+            925430163,
+            925430164
+          ]
+        },
+        {
+          "z_grid": "1/2",
+          "base_height": 269135886,
+          "normalized_lead": [
+            786307629,
+            786307630
+          ]
+        },
+        {
+          "z_grid": "9/16",
+          "base_height": 269223440,
+          "normalized_lead": [
+            622883709,
+            622883710
+          ]
+        },
+        {
+          "z_grid": "5/8",
+          "base_height": 269310994,
+          "normalized_lead": [
+            447487086,
+            447487087
+          ]
+        },
+        {
+          "z_grid": "11/16",
+          "base_height": 269398548,
+          "normalized_lead": [
+            240368371,
+            240368372
+          ]
+        },
+        {
+          "z_grid": "3/4",
+          "base_height": 269486102,
+          "normalized_lead": [
+            28567068,
+            28567069
+          ]
+        },
+        {
+          "z_grid": "13/16",
+          "base_height": 269573655,
+          "normalized_lead": [
+            -203823360,
+            -203823359
+          ]
+        },
+        {
+          "z_grid": "7/8",
+          "base_height": 269661209,
+          "normalized_lead": [
+            -453232099,
+            -453232098
+          ]
+        },
+        {
+          "z_grid": "15/16",
+          "base_height": 269748763,
+          "normalized_lead": [
+            -713640477,
+            -713640476
+          ]
+        },
+        {
+          "z_grid": "1",
+          "base_height": 269836317,
+          "normalized_lead": [
+            -995131633,
+            -995131632
+          ]
+        }
+      ]
+    },
+    {
+      "M": 4294967296,
+      "M_exponent": 32,
+      "points": [
+        {
+          "z_grid": "0",
+          "base_height": 4294967296,
+          "normalized_lead": [
+            1397610820,
+            1397610821
+          ]
+        },
+        {
+          "z_grid": "1/16",
+          "base_height": 4295395177,
+          "normalized_lead": [
+            1388012523,
+            1388012524
+          ]
+        },
+        {
+          "z_grid": "1/8",
+          "base_height": 4295823058,
+          "normalized_lead": [
+            1358908193,
+            1358908194
+          ]
+        },
+        {
+          "z_grid": "3/16",
+          "base_height": 4296250939,
+          "normalized_lead": [
+            1311028405,
+            1311028406
+          ]
+        },
+        {
+          "z_grid": "1/4",
+          "base_height": 4296678820,
+          "normalized_lead": [
+            1243749236,
+            1243749237
+          ]
+        },
+        {
+          "z_grid": "5/16",
+          "base_height": 4297106701,
+          "normalized_lead": [
+            1156735621,
+            1156735622
+          ]
+        },
+        {
+          "z_grid": "3/8",
+          "base_height": 4297534582,
+          "normalized_lead": [
+            1049706591,
+            1049706592
+          ]
+        },
+        {
+          "z_grid": "7/16",
+          "base_height": 4297962463,
+          "normalized_lead": [
+            926921662,
+            926921663
+          ]
+        },
+        {
+          "z_grid": "1/2",
+          "base_height": 4298390344,
+          "normalized_lead": [
+            783540071,
+            783540072
+          ]
+        },
+        {
+          "z_grid": "9/16",
+          "base_height": 4298818225,
+          "normalized_lead": [
+            619523453,
+            619523454
+          ]
+        },
+        {
+          "z_grid": "5/8",
+          "base_height": 4299246107,
+          "normalized_lead": [
+            441123804,
+            441123805
+          ]
+        },
+        {
+          "z_grid": "11/16",
+          "base_height": 4299673988,
+          "normalized_lead": [
+            240235087,
+            240235088
+          ]
+        },
+        {
+          "z_grid": "3/4",
+          "base_height": 4300101869,
+          "normalized_lead": [
+            18646509,
+            18646510
+          ]
+        },
+        {
+          "z_grid": "13/16",
+          "base_height": 4300529750,
+          "normalized_lead": [
+            -219187169,
+            -219187168
+          ]
+        },
+        {
+          "z_grid": "7/8",
+          "base_height": 4300957631,
+          "normalized_lead": [
+            -479515637,
+            -479515636
+          ]
+        },
+        {
+          "z_grid": "15/16",
+          "base_height": 4301385512,
+          "normalized_lead": [
+            -760662864,
+            -760662863
+          ]
+        },
+        {
+          "z_grid": "1",
+          "base_height": 4301813393,
+          "normalized_lead": [
+            -1050913288,
+            -1050913287
+          ]
+        }
+      ]
+    }
+  ]
+}

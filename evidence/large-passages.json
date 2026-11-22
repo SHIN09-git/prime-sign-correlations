@@ -1,0 +1,121 @@
+{
+  "bits": 128,
+  "block_size": 262144,
+  "method": "contiguous",
+  "crossing_scale": 100000000,
+  "overshoot_scale": 1000000000,
+  "rows": [
+    {
+      "M_exponent": 24,
+      "M": 16777216,
+      "crossing": [
+        1698665299806341,
+        1698665299806342
+      ],
+      "scaled_overshoot": [
+        753595683,
+        753595684
+      ],
+      "last_n": 16986653,
+      "last_sign": 1,
+      "overlap_events": 3702,
+      "event_prefix_sha256": "5cace4a608158bc4b68aa6630beab04c12b952bb62138ff255a5e12c6386e4d8"
+    },
+    {
+      "M_exponent": 26,
+      "M": 67108864,
+      "crossing": [
+        6757915683294024,
+        6757915683294025
+      ],
+      "scaled_overshoot": [
+        750378190,
+        750378191
+      ],
+      "last_n": 67579157,
+      "last_sign": -1,
+      "overlap_events": 7122,
+      "event_prefix_sha256": "9273ce19370144b4cdda0d8e0ec41a65065fe8282c9990647561d476ee0fe595"
+    },
+    {
+      "M_exponent": 28,
+      "M": 268435456,
+      "crossing": [
+        26949650299966559,
+        26949650299966560
+      ],
+      "scaled_overshoot": [
+        757424665,
+        757424666
+      ],
+      "last_n": 269496503,
+      "last_sign": 1,
+      "overlap_events": 13714,
+      "event_prefix_sha256": "410f9da7f6325c210b19a20d0ad3b097e1f8caa6c06d40cb796ab1cbac412643"
+    },
+    {
+      "M_exponent": 30,
+      "M": 1073741824,
+      "crossing": [
+        107610021683307830,
+        107610021683307831
+      ],
+      "scaled_overshoot": [
+        759007623,
+        759007624
+      ],
+      "last_n": 1076100217,
+      "last_sign": -1,
+      "overlap_events": 26569,
+      "event_prefix_sha256": "ed6dbcf03db9bc049d12136597c2888cb363b6a67c560a27e275e09d79950798"
+    },
+    {
+      "M_exponent": 32,
+      "M": 4294967296,
+      "crossing": [
+        430013894299982862,
+        430013894299982863
+      ],
+      "scaled_overshoot": [
+        755415312,
+        755415313
+      ],
+      "last_n": 4300138943,
+      "last_sign": 1,
+      "overlap_events": 51688,
+      "event_prefix_sha256": "08ce78c063377d565d30883b0528fbf340a6d5b7425b55475ed0d5bd31172785"
+    },
+    {
+      "M_exponent": 34,
+      "M": 17179869184,
+      "crossing": [
+        1719120244883328329,
+        1719120244883328330
+      ],
+      "scaled_overshoot": [
+        755768077,
+        755768078
+      ],
+      "last_n": 17191202449,
+      "last_sign": -1,
+      "overlap_events": 100036,
+      "event_prefix_sha256": "e3d10c8a588f761d4c30bd5227c08a9bc0a46bd71897852534a30ea703f23070"
+    },
+    {
+      "M_exponent": 36,
+      "M": 68719476736,
+      "crossing": [
+        6874411423883330279,
+        6874411423883330280
+      ],
+      "scaled_overshoot": [
+        753988674,
+        753988675
+      ],
+      "last_n": 68744114239,
+      "last_sign": -1,
+      "overlap_events": 195443,
+      "event_prefix_sha256": "a379be52e392f7f250bf77c6948d434c8790b4f6c29348c29402e110c1391aee"
+    }
+  ]
+}

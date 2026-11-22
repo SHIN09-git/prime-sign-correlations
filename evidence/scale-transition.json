@@ -1,0 +1,417 @@
+{
+  "precision_bits": 128,
+  "crossing_endpoint_scale": 100000000,
+  "affine_endpoint_scale": 1000000000000,
+  "first_reversals": [
+    {
+      "width_denominator": 32,
+      "first_crossing": [
+        797592246,
+        797592247
+      ],
+      "grid_cell": [
+        3136,
+        3168,
+        396
+      ],
+      "cells_checked": 39
+    },
+    {
+      "width_denominator": 64,
+      "first_crossing": [
+        2276492957,
+        2276492958
+      ],
+      "grid_cell": [
+        17664,
+        17792,
+        780
+      ],
+      "cells_checked": 129
+    },
+    {
+      "width_denominator": 128,
+      "first_crossing": [
+        4866785923,
+        4866785924
+      ],
+      "grid_cell": [
+        75264,
+        75594,
+        1548
+      ],
+      "cells_checked": 259
+    },
+    {
+      "width_denominator": 256,
+      "first_crossing": [
+        10670775594,
+        10670775595
+      ],
+      "grid_cell": [
+        328704,
+        329216,
+        3084
+      ],
+      "cells_checked": 491
+    },
+    {
+      "width_denominator": 512,
+      "first_crossing": [
+        16876281382,
+        16876281383
+      ],
+      "grid_cell": [
+        1038336,
+        1039338,
+        6156
+      ],
+      "cells_checked": 721
+    },
+    {
+      "width_denominator": 1024,
+      "first_crossing": [
+        31291048562,
+        31291048563
+      ],
+      "grid_cell": [
+        3848192,
+        3849900,
+        12300
+      ],
+      "cells_checked": 1197
+    }
+  ],
+  "affine_checks": [
+    {
+      "X": 128,
+      "s": "7/8",
+      "forms": [
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "prime_tuples": 1,
+      "prime_power_tuples": 4,
+      "overlap_cells": 4,
+      "frequency": [
+        22987167409,
+        22987167410
+      ],
+      "scaled_frequency": [
+        541168439302,
+        541168439303
+      ],
+      "X_mass_minus_weighted_prime_sum": [
+        334268766430,
+        334268766431
+      ]
+    },
+    {
+      "X": 1024,
+      "s": "7/8",
+      "forms": [
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "prime_tuples": 4,
+      "prime_power_tuples": 4,
+      "overlap_cells": 4,
+      "frequency": [
+        2873205172,
+        2873205173
+      ],
+      "scaled_frequency": [
+        138044008451,
+        138044008452
+      ],
+      "X_mass_minus_weighted_prime_sum": [
+        24350770,
+        24350771
+      ]
+    },
+    {
+      "X": 16384,
+      "s": "7/8",
+      "forms": [
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "prime_tuples": 26,
+      "prime_power_tuples": 26,
+      "overlap_cells": 26,
+      "frequency": [
+        1054440506,
+        1054440507
+      ],
+      "scaled_frequency": [
+        99295387401,
+        99295387402
+      ],
+      "X_mass_minus_weighted_prime_sum": [
+        17720328,
+        17720329
+      ]
+    },
+    {
+      "X": 262144,
+      "s": "7/8",
+      "forms": [
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "prime_tuples": 251,
+      "prime_power_tuples": 251,
+      "overlap_cells": 251,
+      "frequency": [
+        649211231,
+        649211232
+      ],
+      "scaled_frequency": [
+        101060619611,
+        101060619612
+      ],
+      "X_mass_minus_weighted_prime_sum": [
+        9778095,
+        9778096
+      ]
+    },
+    {
+      "X": 1048576,
+      "s": "7/8",
+      "forms": [
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "prime_tuples": 840,
+      "prime_power_tuples": 840,
+      "overlap_cells": 840,
+      "frequency": [
+        544201296,
+        544201297
+      ],
+      "scaled_frequency": [
+        104585261174,
+        104585261175
+      ],
+      "X_mass_minus_weighted_prime_sum": [
+        8110098,
+        8110099
+      ]
+    },
+    {
+      "X": 128,
+      "s": "31/32",
+      "forms": [
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "prime_tuples": 0,
+      "prime_power_tuples": 1,
+      "overlap_cells": 1,
+      "frequency": [
+        19116479885,
+        19116479886
+      ],
+      "scaled_frequency": [
+        2183626857997,
+        2183626857998
+      ],
+      "X_mass_minus_weighted_prime_sum": [
+        77686189149,
+        77686189150
+      ]
+    },
+    {
+      "X": 1024,
+      "s": "31/32",
+      "forms": [
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "prime_tuples": 1,
+      "prime_power_tuples": 1,
+      "overlap_cells": 1,
+      "frequency": [
+        3543390999,
+        3543391000
+      ],
+      "scaled_frequency": [
+        1180036554395,
+        1180036554396
+      ],
+      "X_mass_minus_weighted_prime_sum": [
+        11547779,
+        11547780
+      ]
+    },
+    {
+      "X": 16384,
+      "s": "31/32",
+      "forms": [
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "prime_tuples": 0,
+      "prime_power_tuples": 0,
+      "overlap_cells": 0,
+      "frequency": [
+        0,
+        0
+      ],
+      "scaled_frequency": [
+        0,
+        0
+      ],
+      "X_mass_minus_weighted_prime_sum": [
+        0,
+        0
+      ]
+    },
+    {
+      "X": 262144,
+      "s": "31/32",
+      "forms": [
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "prime_tuples": 8,
+      "prime_power_tuples": 8,
+      "overlap_cells": 8,
+      "frequency": [
+        98531178,
+        98531179
+      ],
+      "scaled_frequency": [
+        191367232644,
+        191367232645
+      ],
+      "X_mass_minus_weighted_prime_sum": [
+        1149461,
+        1149462
+      ]
+    },
+    {
+      "X": 1048576,
+      "s": "31/32",
+      "forms": [
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "prime_tuples": 39,
+      "prime_power_tuples": 39,
+      "overlap_cells": 39,
+      "frequency": [
+        104531721,
+        104531722
+      ],
+      "scaled_frequency": [
+        278493121037,
+        278493121038
+      ],
+      "X_mass_minus_weighted_prime_sum": [
+        2399984,
+        2399985
+      ]
+    }
+  ],
+  "constants": {
+    "prime_cutoff": 1000000,
+    "scale": 1000000000,
+    "C2": [
+      660161200,
+      660161861
+    ],
+    "unconditional_liminf_lower_constant": [
+      130664337,
+      130664403
+    ],
+    "conditional_first_passage_constant": [
+      739149110,
+      739149481
+    ],
+    "conditional_Sophie_Germain_reading": [
+      112317731,
+      112317845
+    ]
+  }
+}

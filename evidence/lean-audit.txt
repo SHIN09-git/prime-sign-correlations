@@ -46,3 +46,31 @@ PrimeSigns.fixed_lag_inverse : ∀ (q τ weight : ℝ) (K V B d : ℝ → ℝ),
 'PrimeSigns.nonprime_weight_le_half' depends on axioms: [propext, Classical.choice, Quot.sound]
 'PrimeSigns.detect_prime_power' depends on axioms: [propext, Classical.choice, Quot.sound]
 'PrimeSigns.detect_prime' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PrimeSigns.affine_integer_lock' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PrimeSigns.prime_power_alignment' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PrimeSigns.six_never_aligns' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PrimeSigns.overlap_length' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PrimeSigns.upper_neighbour_opens' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PrimeSigns.lower_neighbour_opens' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PrimeSigns.contraction_error' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PrimeSigns.profile_positive_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PrimeSigns.first_passage_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PrimeSigns.first_passage_limit : ∀ {ι : Type u_1} {f : Filter ι} (M H B : ι → ℝ) {r : ℝ},
+  0 < r →
+    (∀ᶠ (i : ι) in f, 0 < H i) →
+      (∀ (z : ℝ), 0 < z → z < r → ∀ᶠ (i : ι) in f, M i + z * H i ≤ B i) →
+        (∀ (z : ℝ), r < z → ∀ᶠ (i : ι) in f, B i ≤ M i + z * H i) →
+          Filter.Tendsto (fun i => (B i - M i) / H i) f (nhds r)
+@PrimeSigns.ramp_multiplier_lower : ∀ {b ξ : ℝ},
+  ξ ≠ 0 → ∀ (s : ℂ), ‖s‖ = 1 → b ^ 2 / (1 + √(1 + (b * ξ) ^ 2)) ≤ ‖s * (1 - Complex.I * ↑(b * ξ)) - 1‖ / ξ ^ 2
+'PrimeSigns.ramp_reverse_triangle' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PrimeSigns.ramp_multiplier_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PrimeSigns.ramp_exp_integral' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PrimeSigns.ramp_fourier' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PrimeSigns.ramp_fourier_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PrimeSigns.ramp_fourier_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PrimeSigns.ramp_fourier_ne_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PrimeSigns.ramp_fourier_ne_zero : ∀ {b : ℝ},
+  0 < b → ∀ (ξ : ℝ), ∫ (x : ℝ) in 0..b, ↑x * Complex.exp (Complex.I * ↑ξ * ↑x) ≠ 0
+'PrimeSigns.smooth_test_division' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PrimeSigns.multiplier_test_uniqueness' depends on axioms: [propext, Classical.choice, Quot.sound]

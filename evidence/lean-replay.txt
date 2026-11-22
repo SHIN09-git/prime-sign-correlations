@@ -1,5 +1,7 @@
 replaying PrimeSigns
 replaying PrimeSigns.Window
+replaying PrimeSigns.Ramp
+replaying PrimeSigns.Passage
 replaying PrimeSigns.Limits
 replaying PrimeSigns.Inverse
 replaying PrimeSigns.Detection

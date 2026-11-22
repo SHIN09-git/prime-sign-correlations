@@ -5,10 +5,14 @@
     "JIN HANZHE"
   ],
   "paper": {
-    "english_pages": 9,
-    "chinese_pages": 9,
+    "english_pages": 22,
+    "chinese_pages": 22,
     "typst": "0.15.2",
-    "vector_figure": "paper/trace.svg"
+    "vector_figures": [
+      "paper/trace.svg",
+      "paper/passage.svg"
+    ],
+    "unix_creation_timestamp": 1795305600
   },
   "proof_check": {
     "lean": "4.24.0",
@@ -21,6 +25,8 @@
       "PrimeSigns.Detection",
       "PrimeSigns.Inverse",
       "PrimeSigns.Limits",
+      "PrimeSigns.Passage",
+      "PrimeSigns.Ramp",
       "PrimeSigns.Window"
     ],
     "audited_theorems": [
@@ -40,14 +46,32 @@
       "PrimeSigns.prime_power_gap",
       "PrimeSigns.nonprime_weight_le_half",
       "PrimeSigns.detect_prime_power",
-      "PrimeSigns.detect_prime"
+      "PrimeSigns.detect_prime",
+      "PrimeSigns.affine_integer_lock",
+      "PrimeSigns.prime_power_alignment",
+      "PrimeSigns.six_never_aligns",
+      "PrimeSigns.overlap_length",
+      "PrimeSigns.upper_neighbour_opens",
+      "PrimeSigns.lower_neighbour_opens",
+      "PrimeSigns.contraction_error",
+      "PrimeSigns.profile_positive_iff",
+      "PrimeSigns.first_passage_limit",
+      "PrimeSigns.ramp_reverse_triangle",
+      "PrimeSigns.ramp_multiplier_lower",
+      "PrimeSigns.ramp_exp_integral",
+      "PrimeSigns.ramp_fourier",
+      "PrimeSigns.ramp_fourier_bound",
+      "PrimeSigns.ramp_fourier_zero",
+      "PrimeSigns.ramp_fourier_ne_zero",
+      "PrimeSigns.smooth_test_division",
+      "PrimeSigns.multiplier_test_uniqueness"
     ],
     "axioms_observed": [
       "Classical.choice",
       "Quot.sound",
       "propext"
     ],
-    "analytic_inputs": "The zeta explicit formula, variance scaling and probabilistic comparison are proved in the paper; fixed_lag_inverse accepts their consequences as hypotheses."
+    "analytic_inputs": "The explicit formula, Selberg sieve, limiting measures, arithmetic averages and finite-time probability estimates are manuscript arguments. Lean checks the deterministic implications, nonvanishing of the ramp Fourier integral and division of smooth compactly supported tests."
   },
   "computations": {
     "python": "3.12.10",
@@ -63,6 +87,50 @@
     "independent_midpoint_count_checks": 1390,
     "finite_baseline_bits": 160,
     "finite_repeat_bits": 192,
-    "finite_intervals_at_both_precisions": "identical on the outward decimal grid"
-  }
+    "finite_intervals_at_both_precisions": "identical on the outward decimal grid",
+    "first_passage": {
+      "small_widths": 6,
+      "width_endpoint_scale": 100000000,
+      "affine_tests": 10,
+      "affine_and_small_precision_bits": [
+        128,
+        192
+      ],
+      "outward_intervals_agree": true,
+      "segmented_heights": [
+        16777216,
+        67108864,
+        268435456,
+        1073741824,
+        4294967296,
+        17179869184,
+        68719476736
+      ],
+      "segmented_sieve_methods": [
+        "contiguous",
+        "affine"
+      ],
+      "segmented_precision_bits": [
+        128,
+        192
+      ],
+      "segmented_blocks": [
+        262144,
+        524287
+      ],
+      "segmented_prefixes_and_brackets_agree": true,
+      "full_profile_sample_sizes": [
+        17,
+        17
+      ],
+      "profile_cross_check": "192-bit direct affine sieve at a different block size agrees on every sample",
+      "largest_event_prefix_length": 195443,
+      "largest_normalized_crossing_enclosure": [
+        753988674,
+        753988675
+      ],
+      "normalized_crossing_scale": 1000000000
+    }
+  },
+  "edition": "2.0.0"
 }

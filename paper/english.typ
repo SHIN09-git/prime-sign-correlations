@@ -1,8 +1,8 @@
 #import "layout.typ": *
 #import "equations.typ" as eq
-#show: layout.with("en","Recovering prime powers from sign correlations in short intervals","Prime powers from sign correlations")
+#show: layout.with("en","Sign correlations of primes in short intervals and their first reversal","Prime sign correlations and their first reversal")
 
-#text(weight:"bold")[Abstract.] We study the joint signs of the centered von Mangoldt counts on two short intervals whose left endpoints have fixed ratio $q>1$. After logarithmic averaging in the base point, the first-order deviation of the probability of two excesses from $1/4$ detects exactly the prime powers. At $q=p^k$ its coefficient is $-(log p)/(2pi sqrt(q))$. A displacement of order the window width gives an explicit triangular profile. A single reference ratio then recovers the von Mangoldt function uniformly on a growing range. The arithmetic sign results assume an independent family of zero ordinates with a quantified exceptional set. The exact formula for the multiplicity-counted spectral kernel uses only the Riemann theorem and the classical explicit formula.
+#text(weight:"bold")[Abstract.] We ask when the joint excess of prime-counting windows at ratios 4 and 6 first changes order as the observation height grows. Write $delta$ for the relative width and $M=1/(6delta)$. Unconditionally, first contact is delayed past $M+c sqrt(M)(log M)^(3/2)$. An upper bound on the same scale forces a uniform lower bound for primes $p$ with $6p+1$ or $6p-1$ prime. The sharp first-passage constant is equivalent to a local prime-pair asymptotic. The equivalence persists in probability over starting heights. A single mean signed reading characterizes the global pair law. A different finite-height schedule encodes the full asymptotic for any prescribed admissible tuple of affine forms containing $n$ in a single joint sign frequency. In the many-prime regime we derive the prime-power coefficient from a finite band of zeta zeros with a quantified error for exact and near relations. The unconditional arithmetic and conditional spectral conclusions concern different observation scales.
 
 = The two-window question
 Write $psi(x)=sum_(n<=x) Lambda(n)$, where $Lambda(p^k)=log p$ for primes $p$, $k>=1$, and $Lambda(n)=0$ at the other integers. For $0<h<1$ define
@@ -13,7 +13,7 @@ The inner limit is taken at fixed $h,a$. Write $L=log(1/h)$ and let $lambda(q)=L
 
 #lead[Theorem 1.][Under the hypothesis in §2, the limit in @density exists. For every fixed real $q>1$, uniformly on bounded sets of real $tau$,]
 #eq.inverse
-Here $u_+=max(u,0)$. At the ratios 2 and 4 the numerators agree, and the square roots in the denominators distinguish their strengths. At 6 the displayed coefficient vanishes. The two-limit assertion gives no sampling time for measuring a density at a prescribed precision.
+Here $u_+=max(u,0)$. At the ratios 2 and 4 the numerators agree, and the square roots in the denominators distinguish their strengths. At 6 the displayed coefficient vanishes. Theorems 4–6 give a first-passage bound, a prime-tuple converse and a finite-height comparison.
 
 #pagebreak()
 = Zero hypotheses and uniform recovery
@@ -127,17 +127,19 @@ table.hline(),table.header([Base range $[A,B]$],[$q=2$],[$q=4$],[$q=6$]),table.h
 [$[2^14,2^16]$],[0.190440],[0.240567],[0.226125],table.hline()),
 caption:[Measured joint excess frequencies, rounded to six decimal places. The archived intervals have width at most $10^(-9)$.])
 
-The sign of $F_6(A,B)-1/4$ changes between the two ranges. In the larger range the frequency at ratio 6 is even lower than the frequency at the prime-power ratio 4. Thus the ordering of the observed frequencies at a single height can give a different impression from their limiting first-order coefficients. This is one reason the sampling-time question matters.
+The sign of $F_6(A,B)-1/4$ changes between the two ranges. In the larger range the frequency at ratio 6 is even lower than the frequency at the prime-power ratio 4. Sections 9–12 now locate the first reversal for a common starting point. Sections 15–17 give a condition on the finite observation length for detecting the limiting coefficient.
 
 #pagebreak()
+#include "first-passage-en.typ"
+#include "inverse-scales-en.typ"
 = Scope and references
 Montgomery and Soundararajan [2] studied Gaussian prime counts in short intervals in a common finite-height regime. Leung [1] obtained the joint Gaussian law and secondary negative correlations for nearby short windows under RH and LI. In his normalization the center displacement is $t$ times the window width and Theorem 3.1 bounds its largest normalized center parameter by $delta^(-1/10)$. A fixed dilation here requires displacements of order $1/h$ and allows the localized prime masses in @trace to enter. Landau’s exponential sum already detects a prime-power multiplier through a linear statistic of zeta zeros [10, Eq. (1.1)]. Suzuki [3] exhibited the prime-power terms in a twice-integrated zeta explicit formula. The spectral atoms in @distribution and the Gaussian arcsine identity are classical. The object recovered here is the coefficient of a binary counting statistic at macroscopic ratios, together with its growing-range and perturbation estimates.
 
-The coefficient and recovery theorems concern ordered limits. Removing the spectral independence condition for the two-excess observable or proving a quantitative common-limit theorem in $h$ and $Y$ would strengthen them. The exact spectral trace and the arithmetic multiplicity correction in §4 already hold with the Riemann theorem alone. The accompanying Lean project checks the window profile, the first-order sine transfer, the calibration bound, both arithmetic decision thresholds and the cell inequalities used in §8. It also derives the fixed-lag inverse limit from explicit trace, variance and Gaussian-comparison inputs. The zero expansion and the probabilistic estimates supplying those inputs are proved in the text. This preprint has not undergone external peer review.
+The exact trace and multiplicity correction in §§3–4 use the Riemann theorem. The lower bound of Theorem 4 and the equivalence of Theorem 5 use elementary arithmetic and sieve arguments alone. The sharp first-passage constant uses the local pair law, and the common-limit spectral coefficient needs control of the finite resonance sum. Establishing either of those inputs for the actual primes or zeros remains open here. The Lean package verifies the deterministic limiting implication, window and integer geometry, inversion, the transfer from a crossing profile to its first location, and nonvanishing of the actual ramp Fourier integral. The sieve, affine asymptotics and probabilistic estimates are proved in the text. This preprint has not undergone independent journal review.
 
 #sub[References]
-#set text(size:10.2pt)
-#set par(spacing:.44em,leading:.52em)
+#set text(size:9.1pt)
+#set par(spacing:.26em,leading:.43em)
 [1] S.-K. Leung. Joint distribution of primes in multiple short intervals. _Advances in Mathematics_ (2026). #link("https://arxiv.org/abs/2401.04000")[arXiv:2401.04000].
 
 [2] H. L. Montgomery and K. Soundararajan. Primes in short intervals. _Comm. Math. Phys._ *252* (2004), 589–617. #link("https://doi.org/10.1007/s00220-004-1222-4")[Journal].
@@ -159,3 +161,13 @@ The coefficient and recovery theorems concern ordered limits. Removing the spect
 [10] K. Ford and A. Zaharescu. On the distribution of imaginary parts of zeros of the Riemann zeta function. _J. reine angew. Math._ *579* (2005), 145–158. #link("https://arxiv.org/abs/math/0405459")[Paper].
 
 [11] G. Martin and N. Ng. Inclusive prime number races. #link("https://arxiv.org/abs/1710.00088")[arXiv:1710.00088].
+
+[12] S. L. Aletheia-Zomlefer, L. Fukshansky and S. R. Garcia. The Bateman–Horn conjecture. Heuristics, history, and applications. _Expo. Math._ #link("https://doi.org/10.1016/j.exmath.2019.04.005")[Journal].
+
+[13] P. X. Gallagher. On the distribution of primes in short intervals. _Mathematika_ *23* (1976), 4–9. #link("https://doi.org/10.1112/S0025579300016442")[Journal].
+
+[14] Y. Lamzouri. An effective Linear Independence conjecture for the zeros of the Riemann zeta function and applications. #link("https://arxiv.org/abs/2311.04860")[arXiv:2311.04860].
+
+[15] N. Wiener. Tauberian theorems. _Ann. of Math._ *33* (1932), 1–100. #link("https://doi.org/10.2307/1968102")[DOI].
+
+[16] K. Ford. _Sieve Methods_, course notes (2023), Selberg’s sieve. #link("https://ford126.web.illinois.edu/sieve2023.pdf")[PDF].

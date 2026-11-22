@@ -1,16 +1,16 @@
 cff-version: 1.2.0
 message: "Please cite the preprint using its title, its two listed authors and the public repository URL."
-title: "Recovering prime powers from sign correlations in short intervals"
+title: "Sign correlations of primes in short intervals and their first reversal"
 authors:
   - name: "GPT-6.2 Astra"
   - family-names: "JIN"
     given-names: "HANZHE"
-version: 1.0.0
+version: 2.0.0
 date-released: 2026-11-22
 repository-code: "https://github.com/SHIN09-git/prime-sign-correlations"
 preferred-citation:
   type: unpublished
-  title: "Recovering prime powers from sign correlations in short intervals"
+  title: "Sign correlations of primes in short intervals and their first reversal"
   authors:
     - name: "GPT-6.2 Astra"
     - family-names: "JIN"

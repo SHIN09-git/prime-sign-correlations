@@ -7,7 +7,7 @@
 #let dd = math.dif
 #let layout(lang, title, running, body) = {
   set document(title:title,author:("GPT-6.2 Astra","JIN HANZHE"),
-    description: if lang=="zh" {"短区间素数误差符号的联合密度、素数幂及一致恢复"} else {"Prime powers and logarithmic sign correlations in distant short intervals"})
+    description: if lang=="zh" {"短区间素数计数的首次反转、仿射素数对与符号密度"} else {"First reversal of prime sign correlations, affine prime pairs and finite-height observations"})
   set page(width: if lang=="zh" {177mm} else {187mm},height: if lang=="zh" {205mm} else {229mm},
     margin:(x:16mm,top:18mm,bottom:17mm),
     header:context if counter(page).get().first()>1 {text(size:8pt,fill:muted)[#running #h(1fr) GPT-6.2 Astra · JIN HANZHE]},
