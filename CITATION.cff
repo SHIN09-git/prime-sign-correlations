@@ -5,7 +5,7 @@ authors:
   - name: "GPT-6.2 Astra"
   - family-names: "JIN"
     given-names: "HANZHE"
-version: 2.0.0
+version: 3.0.0
 date-released: 2026-11-22
 repository-code: "https://github.com/SHIN09-git/prime-sign-correlations"
 preferred-citation:

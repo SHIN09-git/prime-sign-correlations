@@ -74,3 +74,25 @@ PrimeSigns.fixed_lag_inverse : ∀ (q τ weight : ℝ) (K V B d : ℝ → ℝ),
   0 < b → ∀ (ξ : ℝ), ∫ (x : ℝ) in 0..b, ↑x * Complex.exp (Complex.I * ↑ξ * ↑x) ≠ 0
 'PrimeSigns.smooth_test_division' depends on axioms: [propext, Classical.choice, Quot.sound]
 'PrimeSigns.multiplier_test_uniqueness' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PrimeSigns.cell_log_width' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PrimeSigns.image_log_shifts' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PrimeSigns.overlap_fraction_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PrimeSigns.integer_weight_overtake' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PrimeSigns.quadratic_upper_margin' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PrimeSigns.four_window_lock' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PrimeSigns.contact_le_of_strict_reading' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PrimeSigns.fraction_of_capped_mean' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PrimeSigns.concrete_upper_prime_witnesses' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PrimeSigns.concrete_upper_weight' depends on axioms: [propext]
+@PrimeSigns.integer_weight_overtake : ∀ {ι : Type u_1} (s : Finset ι) (n w : ι → ℝ) {U D J h C₄ C₆ : ℝ},
+  0 < D →
+    0 < h →
+      C₄ / h ≤ J →
+        ∑ i ∈ s, w i ≤ C₆ / h →
+          (∀ i ∈ s, (3 * (n i - U) - 1) / (3 * D) ≤ w i) → 3 * D * J < ∑ i ∈ s, (3 * (n i - U) - 1) → C₄ < C₆
+PrimeSigns.concrete_upper_prime_witnesses : PrimeSigns.upperWitnessImages.length = 324 ∧
+  List.Pairwise (fun x1 x2 => x1 < x2) PrimeSigns.upperWitnessImages ∧
+    ∀ m ∈ PrimeSigns.upperWitnessImages, PrimeSigns.upperWitnessEvent m
+'PrimeSigns.affine_forbidden_classes' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PrimeSigns.degenerate_forbidden_class' depends on axioms: [propext, Quot.sound]
+'PrimeSigns.prime_pair_local_factor' depends on axioms: [propext, Classical.choice, Quot.sound]

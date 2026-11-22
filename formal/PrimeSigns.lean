@@ -5,3 +5,6 @@ import PrimeSigns.Limits
 import PrimeSigns.Inverse
 import PrimeSigns.Passage
 import PrimeSigns.Ramp
+import PrimeSigns.Upper
+import PrimeSigns.UpperWitness
+import PrimeSigns.Residues

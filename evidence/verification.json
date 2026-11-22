@@ -5,12 +5,13 @@
     "JIN HANZHE"
   ],
   "paper": {
-    "english_pages": 22,
-    "chinese_pages": 22,
+    "english_pages": 30,
+    "chinese_pages": 30,
     "typst": "0.15.2",
     "vector_figures": [
       "paper/trace.svg",
-      "paper/passage.svg"
+      "paper/passage.svg",
+      "paper/upper-cover.svg"
     ],
     "unix_creation_timestamp": 1795305600
   },
@@ -27,6 +28,9 @@
       "PrimeSigns.Limits",
       "PrimeSigns.Passage",
       "PrimeSigns.Ramp",
+      "PrimeSigns.Residues",
+      "PrimeSigns.Upper",
+      "PrimeSigns.UpperWitness",
       "PrimeSigns.Window"
     ],
     "audited_theorems": [
@@ -64,14 +68,27 @@
       "PrimeSigns.ramp_fourier_zero",
       "PrimeSigns.ramp_fourier_ne_zero",
       "PrimeSigns.smooth_test_division",
-      "PrimeSigns.multiplier_test_uniqueness"
+      "PrimeSigns.multiplier_test_uniqueness",
+      "PrimeSigns.cell_log_width",
+      "PrimeSigns.image_log_shifts",
+      "PrimeSigns.overlap_fraction_lower",
+      "PrimeSigns.integer_weight_overtake",
+      "PrimeSigns.quadratic_upper_margin",
+      "PrimeSigns.four_window_lock",
+      "PrimeSigns.contact_le_of_strict_reading",
+      "PrimeSigns.fraction_of_capped_mean",
+      "PrimeSigns.concrete_upper_prime_witnesses",
+      "PrimeSigns.concrete_upper_weight",
+      "PrimeSigns.affine_forbidden_classes",
+      "PrimeSigns.degenerate_forbidden_class",
+      "PrimeSigns.prime_pair_local_factor"
     ],
     "axioms_observed": [
       "Classical.choice",
       "Quot.sound",
       "propext"
     ],
-    "analytic_inputs": "The explicit formula, Selberg sieve, limiting measures, arithmetic averages and finite-time probability estimates are manuscript arguments. Lean checks the deterministic implications, nonvanishing of the ramp Fourier integral and division of smooth compactly supported tests."
+    "analytic_inputs": "The explicit formulae, the upper-bound sieve, limiting measures, mean identities, probability estimates, joint-mass integrals and growing-grid bounds are manuscript arguments. The package checks deterministic transfers, the ramp Fourier integral, local residue factors and 324 actual prime-pair witnesses. The full finite cover is a separate integer computation."
   },
   "computations": {
     "python": "3.12.10",
@@ -130,7 +147,56 @@
         753988675
       ],
       "normalized_crossing_scale": 1000000000
+    },
+    "uniform_upper": {
+      "real_parameter_interval": [
+        16384,
+        1099511627776
+      ],
+      "checked_closed_cells": 12581376,
+      "dyadic_blocks": 26,
+      "bins_with_halos": 12600747,
+      "coefficient_unit": 1000000,
+      "uniform_bounds_millionths_by_lower_dyadic_exponent": {
+        "14": 961275,
+        "16": 881768,
+        "23": 792261,
+        "30": 770345,
+        "39": 757579
+      },
+      "numpy": "2.4.4",
+      "numba": "0.67.0",
+      "sieves": [
+        "modulo-30 affine congruences",
+        "direct odd base and image intervals"
+      ],
+      "two_sieves": "All count and offset arrays, including endpoint halos, compared entry by entry and by SHA-256 in every block.",
+      "outward_rounding": "Positive atanh series and exact integer square roots.",
+      "alternative_certificate_check": "Allowed endpoint obtained directly from the published coefficient. All strict inequalities verified using a centered sliding moment and an independent rational log lower bound.",
+      "minimum_alternate_strict_integer_margin": 80802,
+      "worst_cell_above_2pow16": {
+        "A": 79296,
+        "U": 79360,
+        "D": 93760,
+        "b": 88704,
+        "prime_pairs": 324,
+        "integer_weight": 4272462,
+        "required_strict_threshold": 4219200,
+        "log_lower_millionths": 11280936
+      },
+      "witness_validation": "Every image in the 324-pair list compared with independent trial enumeration. Genuine primality and distinctness also checked by Lean kernel reduction.",
+      "evidence_sha256": {
+        "upper-cover.json": "4194a90b77c8237f52b46721700024bd8ffa13d6248d8a78b87446dba50b76ab",
+        "upper-verification.json": "e6f3632b1e1cf3a2c7fe45254286df9b16a3f929b32b1e3d627c77486ce1bd77"
+      }
     }
   },
-  "edition": "2.0.0"
+  "edition": "3.0.0",
+  "upper_bound_scope": {
+    "finite_continuum": "Unconditional, including strict overtake.",
+    "all_height_critical": "Open without a uniform prime-pair lower bound or equivalent correlation input.",
+    "positive_proportion": "Conditional on a dyadic prime-pair count lower bound of the predicted order.",
+    "frequency_grid": "Ordinary zeta critical line for the six-arc coefficient of 6. The Dirichlet critical-line theorem gives the coefficient 8*C2 on a slowly growing primorial grid. The strict remainder margin remains open.",
+    "double_exponential_horizon": "Conditional on effective linear independence and simple zeros."
+  }
 }

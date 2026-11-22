@@ -48,3 +48,20 @@ import PrimeSigns
 #check @PrimeSigns.ramp_fourier_ne_zero
 #print axioms PrimeSigns.smooth_test_division
 #print axioms PrimeSigns.multiplier_test_uniqueness
+
+#print axioms PrimeSigns.cell_log_width
+#print axioms PrimeSigns.image_log_shifts
+#print axioms PrimeSigns.overlap_fraction_lower
+#print axioms PrimeSigns.integer_weight_overtake
+#print axioms PrimeSigns.quadratic_upper_margin
+#print axioms PrimeSigns.four_window_lock
+#print axioms PrimeSigns.contact_le_of_strict_reading
+#print axioms PrimeSigns.fraction_of_capped_mean
+#print axioms PrimeSigns.concrete_upper_prime_witnesses
+#print axioms PrimeSigns.concrete_upper_weight
+#check @PrimeSigns.integer_weight_overtake
+#check @PrimeSigns.concrete_upper_prime_witnesses
+
+#print axioms PrimeSigns.affine_forbidden_classes
+#print axioms PrimeSigns.degenerate_forbidden_class
+#print axioms PrimeSigns.prime_pair_local_factor

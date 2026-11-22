@@ -1,11 +1,11 @@
 #import "layout.typ": *
 #import "transition-equations.typ" as e
 = When does the ordering first reverse?
-Write $I_h(x)=bold(1)_(psi(e^h x)-psi(x)>(e^h-1)x)$. The cumulative joint excess mass and the first contact after the positive lead of ratio 4 at $B=4$ are
+Write $I_(h)(x)=bold(1)_(psi(e^h x)-psi(x)>(e^h-1)x)$. The cumulative joint excess mass and the first contact after the positive lead of ratio 4 at $B=4$ are
 #e.diff
 We take $inf emptyset=+infinity$. Both masses are continuous in $B$. Dividing both by $log(B/3)$ gives the measured frequencies and leaves their ordering intact. For the rest of §§9–12 put $delta=e^h-1$ and
 #e.scale
-Let $P_M(u)$ count primes $n$ in $(M,M+u]$ for which $6n+1$ is prime, plus the analogous count for $6n-1$. A prime satisfying both conditions contributes twice.
+Let $P_(M)(u)$ count primes $n$ in $(M,M+u]$ for which $6n+1$ is prime, plus the analogous count for $6n-1$. A prime satisfying both conditions contributes twice.
 
 #lead[Theorem 4.][For every sufficiently small fixed positive $c$ and all sufficiently large real $M$, the first inequality in @location holds, including when the contact set is empty. The sharp limit in @location is equivalent to the local prime-pair law @pairlaw.]
 #e.barrier
@@ -13,7 +13,7 @@ In fact every fixed $c<1/sqrt(16S log 2)$ is admissible in the lower bound. The 
 #e.local
 We only use this hypothesis at fixed positive $v$ as $M$ tends to infinity. For either sign the two linear forms lose one residue class at 2 and 3, and two classes at larger primes. Each predicted singular series is $4C_2$ [12]. The lower bound in Theorem 4 uses elementary arithmetic and an upper-bound sieve. It requires no hypothesis on primes or zeta zeros.
 
-There is also a converse obstruction. An upper bound $B_*(M)<=M+C H_M$ for all sufficiently large $M$ and some fixed $C$ would give $P_M(C H_M) >>_C H_M/ell^2$ in *every* such interval. In particular the global count of these signed prime pairs up to $X$ would be $>>_C X/(log X)^2$. The global prime-pair asymptotic, without its short-interval version, already implies the weaker conclusion $B_*(M)/M->1$.
+There is also a converse obstruction. An upper bound $B_*(M)<=M+C H_M$ for all sufficiently large $M$ and some fixed $C$ would give $P_(M)(C H_M) >>_C H_M/ell^2$ in *every* such interval. In particular the global count of these signed prime pairs up to $X$ would be $>>_C X/(log X)^2$. The global prime-pair asymptotic, without its short-interval version, already implies the weaker conclusion $B_*(M)/M->1$.
 
 #pagebreak()
 = Arithmetic at the first overlap
@@ -33,13 +33,13 @@ For the two forms $n,6n+1$, or $n,6n-1$, choose $z=sqrt(u)/(log u)^3$ on an inte
 
 Put $j(p)=1/g(p)-1$, extended multiplicatively, and $J=sum_(l<=z)1/j(l)$ over the squarefree support. The main quadratic form per unit length diagonalizes as $sum_l j(l)y_l^2$, where $y_l=sum_(l | d)lambda_d g(d)$, by expanding $1/g("gcd"(d,e))$. Choose $y_l=mu(l)/(j(l)J)$. Möbius inversion gives $lambda_1=1$ and $abs(lambda_d)<=1$: in the numerator the sum over $e<=z/d$ coprime to $d$ is multiplied by $product_(p|d)(1+1/j(p))$, and every product of $e$ with a divisor of $d$ occurs in $J$. The main form is $1/J$. The total remainder is bounded by $(sum_(d<=z)tau(d))^2 << z^2(log(2z))^2$, since $nu("lcm"(d,e))<=tau(d)tau(e)$.
 
-The Dirichlet series of the squarefree weights $1/j(l)$ is $zeta(1+v)^2 G(v)$ with $G(0)=1/S_1$, where $S_1=4C_2$ is the singular series for one sign. For $p>3$ its residual Euler factor is $(1-p^(-1-v))^2(1+2p^(-v)/(p-2))$. After expansion the linear coefficient in $p^(-v)$ is $O(p^(-2))$ and the next two are $O(p^(-2)),O(p^(-3))$. Thus the coefficients of $G$ are absolutely summable even at $v=-1/4$. Convolution with $sum_(n<=x)tau(n)/n=(log x)^2/2+O(log(2x))$ gives $J=(log z)^2/(2S_1)+O(log z)$. Summing the two sieve bounds yields $P_M(u)<=(8S+o(1))u/(log u)^2$ uniformly in the translate as $u$ grows.
+The Dirichlet series of the squarefree weights $1/j(l)$ is $zeta(1+v)^2 G(v)$ with $G(0)=1/S_1$, where $S_1=4C_2$ is the singular series for one sign. For $p>3$ its residual Euler factor is $(1-p^(-1-v))^2(1+2p^(-v)/(p-2))$. After expansion the linear coefficient in $p^(-v)$ is $O(p^(-2))$ and the next two are $O(p^(-2)),O(p^(-3))$. Thus the coefficients of $G$ are absolutely summable even at $v=-1/4$. Convolution with $sum_(n<=x)tau(n)/n=(log x)^2/2+O(log(2x))$ gives $J=(log z)^2/(2S_1)+O(log z)$. Summing the two sieve bounds yields $P_(M)(u)<=(8S+o(1))u/(log u)^2$ uniformly in the translate as $u$ grows.
 
-Partition $(M,M+z_0 H_M]$ into a fixed number of equal intervals, $z_0>0$. If $u$ denotes one subinterval length, then $log u=ell/2+o(ell)$. Applying the bound on each piece, then taking the upper Riemann sums to the integral, gives a limsup of at most $16 S z_0^2$ for $ell^2/H_M^2 integral_((0,z_0 H_M]) v dd P_M(v)$. Monotonicity and @fourmass therefore exclude all contacts up to $M+z_0 H_M$ if $16 S z_0^2<1/(log 2)$. Conversely a contact by $M+C H_M$ forces $P_M(C H_M)>>_C H_M/ell^2$ by @pairreduction. Tiling $[X/2,X]$ with disjoint successive intervals of length $C H_M$ proves the global lower bound.
+Partition $(M,M+z_0 H_M]$ into a fixed number of equal intervals, $z_0>0$. If $u$ denotes one subinterval length, then $log u=ell/2+o(ell)$. Applying the bound on each piece, then taking the upper Riemann sums to the integral, gives a limsup of at most $16 S z_0^2$ for $ell^2/H_M^2 integral_((0,z_0 H_M]) v dd P_(M)(v)$. Monotonicity and @fourmass therefore exclude all contacts up to $M+z_0 H_M$ if $16 S z_0^2<1/(log 2)$. Conversely a contact by $M+C H_M$ forces $P_(M)(C H_M)>>_C H_M/ell^2$ by @pairreduction. Tiling $[X/2,X]$ with disjoint successive intervals of length $C H_M$ proves the global lower bound.
 
 #pagebreak()
 = The first-passage profile
-Under @pairlaw the increasing functions $ell^2 P_M(v H_M)/H_M$ converge uniformly on every compact interval $0<=v<=Z$, by subdivision and continuity of $S v$. Partial summation now gives $ell^2/H_M^2 integral_((0,z H_M])v dd P_M(v) -> S z^2/2$ locally uniformly for $z>=0$. Together with @fourmass and @pairreduction this yields
+Under @pairlaw the increasing functions $ell^2 P_(M)(v H_M)/H_M$ converge uniformly on every compact interval $0<=v<=Z$, by subdivision and continuity of $S v$. Partial summation now gives $ell^2/H_M^2 integral_((0,z H_M])v dd P_(M)(v) -> S z^2/2$ locally uniformly for $z>=0$. Together with @fourmass and @pairreduction this yields
 #e.profile
 The continuous limiting profile is positive below its unique positive root and negative above it. There is no contact between $4$ and $M$. Uniform convergence up to any point below the root excludes earlier contacts, and a single point above it forces a contact by continuity. This proves the location limit, including its constant. For the weaker global assertion, take any fixed $0<epsilon<1/100$. A global asymptotic with positive constant supplies $>>_epsilon M/ell^2$ pairs for $M+epsilon M/3<n<M+2epsilon M/3$. Each contributes $>>_epsilon 1/M$ before $(1+epsilon)M$. This outweighs @fourmass. Let $epsilon$ decrease to zero.
 
@@ -60,7 +60,7 @@ In fact any finite positive limit $b$ of $(B_*(M)-M)/H_M$ as *all* real $M$ tend
 
 At the first contact the masses agree by continuity and $C_4(4)>0$. Apply @pairreduction at that contact. One may replace its scaled upper endpoint by $b$: for any fixed $epsilon>0$ the discrepancy is bounded by the mass of an interval of length $2epsilon$ around $b$, times a bounded weight. The sieve estimate makes its limsup $O(epsilon)$. The same reasoning applies at the translated starting parameter $M'=M+s H_M$ for each fixed real $s$, since $H_(M')/H_M->1$ and $(log M')/ell->1$. Vague convergence applies to the resulting interval tests because the limiting measure has no atoms at their ends. Every subsequential density therefore satisfies
 $ integral_0^b v f(s+v) dd v =1/(log 2) quad (s in RR). $ <sliding>
-Set $K_b(v)=v bold(1)_([0,b])(v)$. Its Fourier transform for the convention $e^(i xi v)$, at $xi!=0$, has numerator $e^(i b xi)(1-i b xi)-1$ and denominator $xi^2$. The reverse triangle inequality gives
+Set $K_(b)(v)=v bold(1)_([0,b])(v)$. Its Fourier transform for the convention $e^(i xi v)$, at $xi!=0$, has numerator $e^(i b xi)(1-i b xi)-1$ and denominator $xi^2$. The reverse triangle inequality gives
 $ abs(hat(K)_b(xi)) >= b^2/(1+sqrt(1+(b xi)^2)) . $ <symbol>
 At zero its value is $b^2/2$. Subtract the constant $2/(b^2 log 2)$ from $f$. By @sliding, this difference has zero convolution with the reflected kernel. This is the uniqueness mechanism of Wiener’s Tauberian theorem [15]. Fourier transform in tempered distributions and divide any smooth compactly supported frequency test by the smooth, nowhere-vanishing multiplier. The difference is zero as a distribution. Every limit is therefore the same constant density, giving convergence on every scaled interval and proving the converse. If one defines the first strict overtake instead, take the infimum over $C_6(B)>C_4(B)$. A finite such infimum is an equality point by continuity and the initial lead. Under the local law the profile has strict signs on the two sides of its root. Thus the forward and reverse arguments, including the typical version below, also give the same equivalences for the first strict overtake. The bound in @symbol also quantifies the loss of one derivative when inverting the convolution in $L^2$ by Plancherel.
 

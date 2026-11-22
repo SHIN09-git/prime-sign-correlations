@@ -2,7 +2,7 @@
 #import "equations.typ" as eq
 #show: layout.with("zh","短区间素数计数的符号相关与首次反转","素数符号相关与首次反转")
 
-#text(weight:"bold")[摘要　] 从同一点开始累计，倍率 4 与 6 的两个短区间同时超额的频率，何时第一次改变排序？设相对宽度为 $delta$，$M=1/(6delta)$。本文无条件证明，在 $M+c sqrt(M)(log M)^(3/2)$ 前不会追平。若存在同阶上界，则每个相应短区间都必须含有定量多个使 $6p+1$ 或 $6p-1$ 为素数的素数 $p$。精确的首次追平常数与该短区间素数对渐近律等价。该等价性对典型起点同样成立，一个固定距离上的平均读数还可刻画全局素数对律。对指定的仿射素数元组，另选一个有限高度的观测方案，还可从单一联合符号频率反推完整计数渐近式。在窗口包含许多整数的尺度，本文用有限零点频带中精确和近似关系的显式误差控制素数幂系数。
+#text(weight:"bold")[摘要　] 从同一点开始累计，倍率 4 与 6 的两个短区间同时超额的频率，何时第一次改变排序？设相对宽度为 $delta$，$M=1/(6delta)$。本文无条件证明，在 $M+c sqrt(M)(log M)^(3/2)$ 前不会追平。若存在同阶上界，则每个相应短区间都必须含有定量多个使 $6p+1$ 或 $6p-1$ 为素数的素数 $p$。在临界尺度上扩大有理频率网格可恢复素数对的完整奇异级数。精确的首次追平常数与该短区间素数对渐近律等价。该等价性对典型起点同样成立，一个固定距离上的平均读数还可刻画全局素数对律。整数覆盖证明，对 $2^16$ 至 $2^40$ 的每个实数起点，上界系数 0.881768 都成立。关于全局误差的单向估计还能给出任意大起点的条件上界。对指定的仿射素数元组，另选一个有限高度的观测方案，还可从单一联合符号频率反推完整计数渐近式。在窗口包含许多整数的尺度，本文用有限零点频带中精确和近似关系的显式误差控制素数幂系数。
 
 = 两个相距很远的窗口
 记 $psi(x)=sum_(n<=x)Lambda(n)$。若 $n=p^k$，其中 $p$ 为素数、$k>=1$，则 $Lambda(n)=log p$。其余整数的权重为零。对 $0<h<1$ 定义
@@ -23,14 +23,14 @@
 将互异的正纵坐标分成 $G$ 和 $E$。要求 $G$ 中零点均为单零点，且 $G$ 中纵坐标模掉 $E$ 的有理线性张成空间后线性无关。换言之，若 $G$ 的一个有限有理线性组合落入该张成空间，其所有系数均为零。另外要求 $J_h=o(h)$，其中
 #eq.energy
 这里采用的独立零点子族与 Martin 和 Ng [11] 在素数竞赛中使用的思想相关。
-通常的零点纵坐标线性无关猜想对按重数列出的全部正纵坐标作要求，此时可取 $E$ 为空。本文允许 $E$ 内部存在任意有理关系及重零点。黎曼定理只确定零点位置，这一分解的存在性仍属附加假设。如果 $A_E(T)=o(T)$，则 $J_h=o(h)$。事实上，$1/h$ 以下的贡献至多为 $h^2A_E(1/h)$，其上方逐次翻倍的频带贡献至多为 $sum_(j>=0)(2^j/h)^(-2) A_E(2^(j+1)/h)$。若 $A_E(T)<<T^beta$、$0<=beta<1$，则 $J_h<<h^(2-beta)$。
+通常的零点纵坐标线性无关猜想对按重数列出的全部正纵坐标作要求，此时可取 $E$ 为空。本文允许 $E$ 内部存在任意有理关系及重零点。黎曼定理只确定零点位置，这一分解的存在性仍属附加假设。如果 $A_(E)(T)=o(T)$，则 $J_h=o(h)$。事实上，$1/h$ 以下的贡献至多为 $h^2A_E(1/h)$，其上方逐次翻倍的频带贡献至多为 $sum_(j>=0)(2^j/h)^(-2) A_(E)(2^(j+1)/h)$。若 $A_(E)(T)<<T^beta$、$0<=beta<1$，则 $J_h<<h^(2-beta)$。
 
 #sub[用倍率 2 校准]
 对整数 $n>=2$，只用同时超额的密度及已知倍率，定义
 #eq.calibration
 #lead[定理 2。][当 $h$ 充分小时，分母为正。对整数 $2<=N<=1/(4h)$ 一致地有]
 #eq.uniform
-因此，当 $N h L->0$ 且 $sqrt(N)J_h/h->0$ 时，估计量以 $o(1)$ 的一致误差恢复 $Lambda$。在完全线性无关假设下，仅需第一个条件。若 $A_E(T)<<sqrt(T)$，也只需第一个条件。当误差小于 $(log 2)/4$ 时，分别以 $(log 2)/2$ 和 $3(log n)/4$ 为阈值，即可识别素数幂和素数。这用到了真素数幂满足 $Lambda(n)<=(log n)/2$。
+因此，当 $N h L->0$ 且 $sqrt(N)J_h/h->0$ 时，估计量以 $o(1)$ 的一致误差恢复 $Lambda$。在完全线性无关假设下，仅需第一个条件。若 $A_(E)(T)<<sqrt(T)$，也只需第一个条件。当误差小于 $(log 2)/4$ 时，分别以 $(log 2)/2$ 和 $3(log n)/4$ 为阈值，即可识别素数幂和素数。这用到了真素数幂满足 $Lambda(n)<=(log n)/2$。
 
 若各输入密度还存在不超过 $eta$ 的误差，只要 $L eta$ 充分小，右侧增加 $O(sqrt(N)L eta)$。这个稳定性估计适用于任何给定精度的密度数据。
 
@@ -39,18 +39,18 @@
 窗口的傅里叶变换及按重数加权的谱核分别为
 #eq.modes
 #eq.kernel
-由 @mode 的两种表示，$abs(b_h(gamma))<<min(h,1/abs(gamma))$。因此 Riemann–von Mangoldt 零点计数 [6，引理 1] 保证核级数绝对收敛。由正负纵坐标对称性，核为实值。对正实数取 $H$，并定义
+由 @mode 的两种表示，$abs(b_(h)(gamma))<<min(h,1/abs(gamma))$。因此 Riemann–von Mangoldt 零点计数 [6，引理 1] 保证核级数绝对收敛。由正负纵坐标对称性，核为实值。对正实数取 $H$，并定义
 #eq.arch
 #lead[定理 3。][当 $a>h$ 时，下列精确公式成立。这里允许零点有重数，纵坐标之间也可以有有理关系。]
 #eq.trace
-把右边的积分记作 $B_h(a)$。求和中只有有限项非零。窗口核总质量为 $4(e^(h/2)-1)^2$，中心值 $w_h(0)=e^h-1$。
+把右边的积分记作 $B_(h)(a)$。求和中只有有限项非零。窗口核总质量为 $4(e^(h/2)-1)^2$，中心值 $w_(h)(0)=e^h-1$。
 
 #sub[证明]
 在 $t>0$ 上，经典显式公式 [5，定理 8] 给出分布恒等式
 $ -sum_gamma e^(i gamma t)/rho=e^(-t/2)(psi(e^t)-e^t+log(2pi)+1/2 log(1-e^(-2t))). $
 对两边作用 $partial_t+1/2$。阶梯函数 $psi(e^t)$ 的每次跳跃在 $log n$ 处给出质量 $Lambda(n)$，其余各项直接求导，从而有
 $ sum_gamma e^(i gamma t)=H(t)-sum_(n>=2) (Lambda(n))/sqrt(n) delta_(log n)(t). $ <distribution>
-原零点级数的局部收敛见第 4 节。指数窗口的自相关恰为 $w_h(t)$，因为当 $abs(t)<=h$ 时重叠积分为 $integral_0^(h-abs(t))e^(u+abs(t)/2)dd u$。其傅里叶变换在 $gamma$ 处等于 $abs(b_h(gamma))^2$。用以 $a$ 为中心的平移窗口测试 @distribution 即得 @trace。严格地说，先与紧支撑概率密度作光滑化。其傅里叶乘子的模至多为一。谱侧利用绝对收敛，算术侧利用测试函数一致收敛及测度局部有限，即可撤去光滑化。在窗口端点恰遇原子时，窗口端点的权重为零，公式同样成立。
+原零点级数的局部收敛见第 4 节。指数窗口的自相关恰为 $w_(h)(t)$，因为当 $abs(t)<=h$ 时重叠积分为 $integral_0^(h-abs(t))e^(u+abs(t)/2)dd u$。其傅里叶变换在 $gamma$ 处等于 $abs(b_(h)(gamma))^2$。用以 $a$ 为中心的平移窗口测试 @distribution 即得 @trace。严格地说，先与紧支撑概率密度作光滑化。其傅里叶乘子的模至多为一。谱侧利用绝对收敛，算术侧利用测试函数一致收敛及测度局部有限，即可撤去光滑化。在窗口端点恰遇原子时，窗口端点的权重为零，公式同样成立。
 
 #pagebreak()
 = 方差尺度与实际计数的极限分布
@@ -61,9 +61,9 @@ $ sum_gamma e^(i gamma t)=H(t)-sum_(n>=2) (Lambda(n))/sqrt(n) delta_(log n)(t). 
 #sub[从零点相位回到素数计数]
 在 $R<=abs(gamma)<2R$ 的频带内，每个单位频格中 $abs(1/rho)$ 的和为 $O((log R)/R)$。取平移高斯函数控制任意单位时间窗口的示性函数，展开频带和的平方。第 $j,k$ 个频格间的傅里叶权重至多为 $O(exp(-max(abs(j-k)-1,0)^2/4))$，全部行和有界。用 $2a b<=a^2+b^2$，可将局部平方范数控制在 $O(R((log R)/R)^2)$ 内。重零点及不完整频带同样适用。对二倍频带求和可得局部 $L^2$ 收敛，对窗口平移一致。再取几乎处处收敛子列，与对称显式公式的逐点极限比较，即可识别第 3 节的展开。
 
-记 $E_0(y)=e^(-y/2)(psi(e^y)-e^y)$，则 $D_h(y)=e^(h/2)E_0(y+h)-E_0(y)$。初等修正项在无穷远趋零。因此，两个固定平移处的向量可在对数均方意义下用系数为 $-b_h(gamma)$ 的有限零点和逼近。对有限相位作 Kronecker–Weyl 平均，得到真实相位轨道闭包上的 Haar 概率。其理由是频率非零的特征标时间平均为零。均方逼近将结论传给有界 Lipschitz 测试函数，也传给二阶矩。
+记 $E_0(y)=e^(-y/2)(psi(e^y)-e^y)$，则 $D_(h)(y)=e^(h/2)E_0(y+h)-E_0(y)$。初等修正项在无穷远趋零。因此，两个固定平移处的向量可在对数均方意义下用系数为 $-b_(h)(gamma)$ 的有限零点和逼近。对有限相位作 Kronecker–Weyl 平均，得到真实相位轨道闭包上的 Haar 概率。其理由是频率非零的特征标时间平均为零。均方逼近将结论传给有界 Lipschitz 测试函数，也传给二阶矩。
 
-特别地，实际的对数协方差等于 $K_h(a)+2sum_(gamma>0)^"distinct" m_gamma(m_gamma-1) abs(b_h(gamma))^2 cos(gamma a)$，附加项对互异正纵坐标求和。取 $a=0$，只需对某个 $h>0$ 有实际方差等于 $V_h$，就与所有非平凡零点均为单零点等价。这是因为指数窗口使每个 $b_h(gamma)$ 都非零。
+特别地，实际的对数协方差等于 $K_(h)(a)+2sum_(gamma>0)^"distinct" m_(gamma)(m_gamma-1) abs(b_(h)(gamma))^2 cos(gamma a)$，附加项对互异正纵坐标求和。取 $a=0$，只需对某个 $h>0$ 有实际方差等于 $V_h$，就与所有非平凡零点均为单零点等价。这是因为指数窗口使每个 $b_(h)(gamma)$ 都非零。
 
 #pagebreak()
 = 从相位概率到两个符号
@@ -72,24 +72,24 @@ $ sum_gamma e^(i gamma t)=H(t)-sum_(n>=2) (Lambda(n))/sqrt(n) delta_(log n)(t). 
 任取一个正常相位，其系数非零，因此在每个坐标上都给出无原子的边际分布。与其余独立相位卷积后仍无原子。正象限的边界于是具有零概率。第 4 节的弱收敛证明对每个固定 $h,a$，实际对数密度 @density 存在，等于这个象限概率。
 
 #sub[定量的正象限估计]
-当 $h$ 充分小且 $abs(K_h(a))<=V_h/2$ 时，一致地有
+当 $h$ 充分小且 $abs(K_(h)(a))<=V_h/2$ 时，一致地有
 #eq.model
-把两个坐标除以 $sqrt(V_h)$。按重数的标准化协方差矩阵对角线为 1，非对角元为 $K_h(a)/V_h$。删去例外零点使各矩阵元改变 $O(J_h/V_h)$。正常部分的协方差特征值因此落在固定的正紧区间内。每个独立向量项的范数为 $O(h/sqrt(V_h))$，所有项的二阶矩之和为 $O(1)$。将协方差变为单位矩阵以后，三阶绝对矩之和为 $O(sqrt(h/L))$。Bentkus 的凸集 Berry–Esseen 不等式 [7] 将正常部分与同协方差高斯向量作比较，误差对全部平移象限一致。可先对充分高的有限截断使用该估计，再取 $L^2$ 极限，协方差的上下界在截断时仍可保持。
+把两个坐标除以 $sqrt(V_h)$。按重数的标准化协方差矩阵对角线为 1，非对角元为 $K_(h)(a)/V_h$。删去例外零点使各矩阵元改变 $O(J_h/V_h)$。正常部分的协方差特征值因此落在固定的正紧区间内。每个独立向量项的范数为 $O(h/sqrt(V_h))$，所有项的二阶矩之和为 $O(1)$。将协方差变为单位矩阵以后，三阶绝对矩之和为 $O(sqrt(h/L))$。Bentkus 的凸集 Berry–Esseen 不等式 [7] 将正常部分与同协方差高斯向量作比较，误差对全部平移象限一致。可先对充分高的有限截断使用该估计，再取 $L^2$ 极限，协方差的上下界在截断时仍可保持。
 
 标准化后的例外向量均值为零，二阶矩为 $O(J_h/V_h)$，重数须在平方前合并。利用独立性对该向量取条件期望。对非退化高斯分布，平移象限概率的二阶偏导数，对全部平移一致有界，可用高斯密度二阶偏导的 $L^1$ 范数控制。Taylor 展开的一次项由零均值消失，余项为 $O(J_h/V_h)$。恢复删去的按重数协方差也只需同阶误差，这可在正定矩阵的紧集上对高斯密度的矩阵参数求导得到。最后，相关系数为 $rho$ 的标准二维高斯正象限概率为 $1/4+arcsin(rho)/(2pi)$。对旋转不变的标准平面高斯，只需计算两个半平面的夹角即可得到此式。于是 @model 得证。
 
 #pagebreak()
 = 从同时超额的频率恢复素数权重
-固定 $q>1$，令 $tau$ 在有界集内变化。$h$ 充分小时，$log q+tau h$ 附近的窗口至多遇到 $log q$ 处的原子。平滑项 $B_h$ 为 $O_q(h^2)$。对上述位移一致地有
-$ w_h(tau h)=h(1-abs(tau))_++O(h^2). $
+固定 $q>1$，令 $tau$ 在有界集内变化。$h$ 充分小时，$log q+tau h$ 附近的窗口至多遇到 $log q$ 处的原子。平滑项 $B_h$ 为 $O_(q)(h^2)$。对上述位移一致地有
+$ w_(h)(tau h)=h(1-abs(tau))_++O(h^2). $
 将 @trace 除以 @variance，再代入 @model。$arcsin u=u+O(u^3)$ 的三次余项在乘 $L$ 后趋零，高斯近似给出的误差为 $O(sqrt(h L)+J_h/h)=o(1)$。这就证明了定理 1，也包括 $abs(tau)=1$ 以及倍率为非整数的情形。
 
 #sub[整数倍率同时增长]
 在 $2<=n<=N<=1/(4h)$、$h$ 充分小时，有 $n(e^h-1)<1$ 以及 $n(1-e^(-h))<1$。所以 $(n e^(-h),n e^h)$ 内仅含整数 $n$。在相应的对数窗口内，$abs(H)<<sqrt(n)$，从 @trace 得到一致估计
-$ K_h(log n)=-(e^h-1)Lambda(n)/sqrt(n)+O(h^2 sqrt(n)). $ <isolated>
-因为 $Lambda(n)/sqrt(n)<<1$，由 @variance，当 $h$ 充分小时，整个整数范围上的 $abs(K_h(log n))/V_h$ 都小于 $1/2$。取 @calibration 中的正弦恰好抵消高斯反正弦。用正弦的 Lipschitz 界传递 @model 的误差，得到
+$ K_(h)(log n)=-(e^h-1)Lambda(n)/sqrt(n)+O(h^2 sqrt(n)). $ <isolated>
+因为 $Lambda(n)/sqrt(n)<<1$，由 @variance，当 $h$ 充分小时，整个整数范围上的 $abs(K_(h)(log n))/V_h$ 都小于 $1/2$。取 @calibration 中的正弦恰好抵消高斯反正弦。用正弦的 Lipschitz 界传递 @model 的误差，得到
 #eq.bound
-@isolated 确定了负号。特别地，$S_h(2)/c_h=(log 2)/sqrt(2)+O(sqrt(h L)+J_h/h+h)$ 最终为正。置 $A_n=sqrt(n)S_h(n)/c_h$，则 $hat(Lambda)_h(n)=(log 2)A_n/A_2$。利用恒等式
+@isolated 确定了负号。特别地，$S_(h)(2)/c_h=(log 2)/sqrt(2)+O(sqrt(h L)+J_h/h+h)$ 最终为正。置 $A_n=sqrt(n)S_(h)(n)/c_h$，则 $hat(Lambda)_h(n)=(log 2)A_n/A_2$。利用恒等式
 $ (log 2)A_n-Lambda(n)A_2=(log 2)(A_n-Lambda(n))-Lambda(n)(A_2-log 2) $
 以及 $Lambda(n)<=log n<<sqrt(N)$，即得 @uniform，定理 2 得证。输入密度变化 $eta$ 至多使 $S_h$ 变化 $2pi eta$，再除以 $c_h$ 最多放大 $O(L)$ 倍，就得到前述稳定性界。
 
@@ -97,7 +97,7 @@ $ (log 2)A_n-Lambda(n)A_2=(log 2)(A_n-Lambda(n))-Lambda(n)(A_2-log 2) $
 
 #pagebreak()
 = 谱侧与算术侧的数值核验
-取 $h=1/32$。下表给出 $K_h(log n+tau h)$ 的两种独立包围区间，显示时的十进制端点再次向外取整。算术侧直接计算 @trace 。谱侧独立求零点和，并将所有未计算零点的尾部一次性包入误差。
+取 $h=1/32$。下表给出 $K_(h)(log n+tau h)$ 的两种独立包围区间，显示时的十进制端点再次向外取整。算术侧直接计算 @trace 。谱侧独立求零点和，并将所有未计算零点的尾部一次性包入误差。
 
 #figure(table(columns:(.50fr,.55fr,1.64fr,1.64fr),align:(right,right,center,center),stroke:none,inset:3.6pt,
 table.hline(),table.header([$n$],[$tau$],[算术侧区间],[谱侧区间]),table.hline(stroke:.45pt),
@@ -116,7 +116,7 @@ $ 2(1+e^(h/2))^2 ((log T+1)/(pi T)-N(T)/T^2)<0.000954. $
 #pagebreak()
 = 在有限高度直接测量符号频率
 对 @density 中的同一个观测量，也可以直接在有限范围上求值。取窗口倍率 $r=33/32$，使用实际素数幂和相应的对数权重，计算
-$ F_q(A,B)=1/(log(B/A)) integral_A^B bold(1)_(psi(r x)-psi(x)>(r-1)x) bold(1)_(psi(r q x)-psi(q x)>(r-1)q x) (dd x)/x. $ <finite>
+$ F_(q)(A,B)=1/(log(B/A)) integral_A^B bold(1)_(psi(r x)-psi(x)>(r-1)x) bold(1)_(psi(r q x)-psi(q x)>(r-1)q x) (dd x)/x. $ <finite>
 
 当 $q$ 为整数时，两个计数只可能在 $x=m$、$m/r$、$m/q$ 或 $m/(r q)$ 处跳变，其中 $m$ 是素数幂。乘以 $33q$ 后，所有断点均在整数格点上。设相邻断点间的开区间为 $(u,v)$，两个加权计数在其中恒为 $s,t$。两个窗口同时超额的部分止于
 $ c=max(u,min(v,32s,32t/q)). $
@@ -132,6 +132,7 @@ caption:[实际计数同时超额的频率，表中保留六位小数。随稿�
 
 #pagebreak()
 #include "first-passage-zh.typ"
+#include "upper-zh.typ"
 #include "inverse-scales-zh.typ"
 = 与已有工作的关系及参考文献
 Montgomery 和 Soundararajan [2] 研究了观测高度和区间长度共同变化时的短区间素数高斯分布。Leung [1] 在 RH 与 LI 下得到了邻近短区间的联合高斯律与次阶负相关。他的中心位移参数 $t$ 以窗口宽度为单位，定理 3.1 将中心参数的最大尺度限制在 $delta^(-1/10)$ 以内。本文固定倍率时，该参数为 $1/h$ 量级，此时 @trace 中的离散素数项进入主项。Landau 的指数和早已能从零点的线性统计量识别素数幂倍率 [10，式 (1.1)]。Suzuki [3] 在二次积分的 zeta 显式公式中已经写出了素数幂项。@distribution 的分布恒等式与高斯反正弦公式均为经典结果。本文研究相距固定倍率的两个计数仅保留正负号后能恢复什么，并估计可同时恢复的整数范围与输入误差。
@@ -172,3 +173,9 @@ Montgomery 和 Soundararajan [2] 研究了观测高度和区间长度共同变�
 [15] N. Wiener. Tauberian theorems. _Ann. of Math._ *33* (1932), 1–100. #link("https://doi.org/10.2307/1968102")[DOI].
 
 [16] K. Ford. _Sieve Methods_, course notes (2023), Selberg’s sieve. #link("https://ford126.web.illinois.edu/sieve2023.pdf")[PDF].
+
+[17] T. Tao. A general parity problem obstruction（2014）。#link("https://terrytao.wordpress.com/2014/11/21/a-general-parity-problem-obstruction/")[原文]。
+
+[18] M. Rubinstein. Independent verification of the five zeta and Dirichlet critical-line statements (2026). #link("https://mrubinst.github.io/grh-lean-verification/")[Verification].
+
+[19] D. Koukoulopoulos. _The Distribution of Prime Numbers_. American Mathematical Society, 2019, ch. 11. #link("https://dms.umontreal.ca/~koukoulo/documents/publications/primes.pdf")[Book].

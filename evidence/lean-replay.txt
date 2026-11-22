@@ -1,5 +1,8 @@
 replaying PrimeSigns
 replaying PrimeSigns.Window
+replaying PrimeSigns.UpperWitness
+replaying PrimeSigns.Upper
+replaying PrimeSigns.Residues
 replaying PrimeSigns.Ramp
 replaying PrimeSigns.Passage
 replaying PrimeSigns.Limits
