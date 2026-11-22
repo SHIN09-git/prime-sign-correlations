@@ -5,7 +5,7 @@ Research preprint, third edition · 22 November 2026
 
 [English paper](paper-english.pdf) · [中文论文](paper-chinese.pdf) · [Lean proofs](formal/README.md) · [Proof review](evidence/proof-review.md) · [Reproduction evidence](evidence)
 
-**Research supplement on the uniform margin.** The new note isolates a Möbius remainder, bounds a range of its actual frequencies, counts primes with rough partners at every sufficiently large height, and constructs marked weights attaining complete cancellation. The strict lower bound for genuine prime pairs remains open. [English note](supplements/uniform-margin/english.pdf) · [中文札记](supplements/uniform-margin/chinese.pdf) · [Verification and Lean scope](supplements/uniform-margin/README.md)
+**Research supplement on the uniform margin.** For each sign and every sufficiently large critical window there are order $H/(\log X)^2$ squarefree products $n(6n\pm1)$ with at most seven prime factors and no prime factor below $X^{1/400}$. On the full rough set, the all-height target is equivalent to a strict doubling ratio below eight for two positive completely multiplicative correlations. The associated iterated limit has only six possible values. Determining that it equals four for some fixed window weight remains open. [English note](supplements/uniform-margin/english.pdf) · [中文札记](supplements/uniform-margin/chinese.pdf) · [Verification and Lean scope](supplements/uniform-margin/README.md)
 
 Choose a relative width $\delta$ and a base point $x$. Assign a window the value 1 if its von Mangoldt count exceeds its length. Compare two copies of that window, one at $x$ and the other at $qx$. Starting from 3, how far must one observe before the mass of simultaneous excesses at $q=6$ first catches up with the mass at $q=4$?
 

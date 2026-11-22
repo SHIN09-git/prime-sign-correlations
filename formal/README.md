@@ -1,12 +1,15 @@
 # Lean verification
 
-This project uses Lean 4.24.0 and Mathlib revision f897ebcf72cd16f89ab4577d0c826cd14afaafc7. The root module imports all ten mathematical modules. Run from this directory with Elan and Git available.
+This project uses Lean 4.24.0 and Mathlib revision f897ebcf72cd16f89ab4577d0c826cd14afaafc7. On this research branch the root module imports the ten main-paper modules and both uniform-margin supplement modules. Run from this directory with Elan and Git available.
 
 ~~~sh
 lake exe cache get
 lake build
 lake env lean Audit.lean
+lake env lean ../supplements/uniform-margin/Audit.lean
 ~~~
+
+The [uniform-margin supplement](../supplements/uniform-margin/README.md) documents its weighted sieve proof and 21 audited declarations. The factor-count module includes the quantified doubling-ratio theorem.
 
 | Paper step | Checked declarations in namespace PrimeSigns |
 | --- | --- |

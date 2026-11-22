@@ -1,10 +1,10 @@
 #import "../../paper/layout.typ": layout, lead, sub
 #import "equations.typ" as eq
 #show: layout.with("en","The unresolved margin for affine prime pairs","The uniform prime-pair margin")
-#set document(description:"A divisor expansion, trilinear savings, rough partners and a one-point obstruction for affine prime pairs in critical short intervals.")
+#set document(description:"Critical intervals for affine almost-prime pairs, a seven-factor sieve and the doubling criterion for genuine prime pairs.")
 #set text(size:11pt)
 #set par(leading:.5em,spacing:.47em)
-#lead[Research note.][The strict lower bound for genuine prime pairs at every large real starting point remains open. We isolate a signed sum, remove an explicit frequency range, prove a lower bound for rough partners, and construct weights attaining complete cancellation while retaining strong one-point estimates.]
+#lead[Research note.][The strict lower bound for genuine prime pairs at every large real starting point remains open. We bound a range of divisor frequencies, exhibit an obstruction for one-point estimates, prove a seven-factor bound in each critical interval, and reduce the missing assertion to a strict ratio below eight for two positive correlations.]
 
 = The critical interval
 Put $ell=log X$, $H=sqrt(X)ell^(3/2)$ and $f=w^2$, with $w$ a fixed nonzero nonnegative smooth function of compact support in $(0,a)$. Write $I_f=integral_RR f(u) dif u$ and $C_2=product_(p>2)(1-1/(p-1)^2)$. The von Mangoldt function weights every prime power $p^j$ by $log p$. We study
@@ -113,6 +113,15 @@ For $op("Re") s>1$ the product converges absolutely and its negative logarithmic
 The model attains equality at the threshold using these one-point controls. Establishing strict inequality for the actual weights requires information that distinguishes them from the marked sequence. The divisor coefficients in §1 are one such distinction. The signed estimate that would complete the proof remains open.
 
 #pagebreak()
+#include "factor-profile-en.typ"
+
+#pagebreak()
+#include "doubling-en.typ"
+
+#pagebreak()
+#include "factor-threshold-en.typ"
+
+#pagebreak()
 = Sources and proof verification
 #sub[Analytic sources]
 [1] GPT-6.2 Astra and JIN HANZHE. _Sign correlations of primes in short intervals and their first reversal_, third edition (2026), §§11–12 and Theorem 4D. #link("https://github.com/SHIN09-git/prime-sign-correlations/tree/d62b69ce93b4b84372d731a57f56e03177558342")[Fixed revision].
@@ -130,7 +139,7 @@ The model attains equality at the threshold using these one-point controls. Esta
 [7] K. Ford, _Sieve Methods_ (2023), Selberg's sieve. #link("https://ford126.web.illinois.edu/sieve2023.pdf")[Course notes]. For the classical obstruction see T. Tao, _A general parity problem obstruction_ (2014). #link("https://terrytao.wordpress.com/2014/11/21/a-general-parity-problem-obstruction/")[Article].
 
 #sub[Formal verification]
-The accompanying Lean 4 module proves the genuine finite divisor expansion for both signs, coprimality of the two moduli, exclusion of adjacent marked vertices, the exponent inequalities in §4, and the uniform positive-fraction equivalence in §5 given its two-sided denominator estimate. The analytic estimates, concentration and Euler-product continuation are proved in this note. The supplement's verification instructions identify each checked declaration.
+The accompanying Lean 4 module proves the genuine finite divisor expansion for both signs, coprimality of the two moduli, exclusion of adjacent marked vertices, the exponent inequalities in §4, and the uniform positive-fraction equivalence in §5 given its two-sided denominator estimate. The analytic estimates, concentration and Euler-product continuation are proved in this note. A second module checks the arithmetic and polynomial identities of §§9–11, the uniform pointwise penalty and complete multiplicativity of the weights. It also proves the moment inequalities and the quantified upper and lower bounds of §12 from its mass hypotheses. The weighted sieve in §8 is a paper proof.
 
 #sub[Status]
 This public research note records partial results. The all-height strict margin and the corresponding first-reversal upper bound at the critical scale remain open.
