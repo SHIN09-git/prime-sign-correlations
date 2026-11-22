@@ -1,5 +1,6 @@
 import PrimeSigns.Margin
 import PrimeSigns.FactorProfile
+import PrimeSigns.LeastFactorWindow
 
 #print axioms PrimeSigns.Margin.sum_coeff
 #print axioms PrimeSigns.Margin.pair_expansion
@@ -22,3 +23,11 @@ import PrimeSigns.FactorProfile
 #print axioms PrimeSigns.FactorProfile.ratio_below_eight
 #print axioms PrimeSigns.FactorProfile.moment_bounds
 #print axioms PrimeSigns.FactorProfile.threshold_envelope
+#print axioms PrimeSigns.LeastFactorWindow.rough_mul_iff
+#print axioms PrimeSigns.LeastFactorWindow.composite_witness
+#print axioms PrimeSigns.LeastFactorWindow.polynomial_roots
+#print axioms PrimeSigns.LeastFactorWindow.bad_fiber_card
+#print axioms PrimeSigns.LeastFactorWindow.bad_residue_count
+#print axioms PrimeSigns.LeastFactorWindow.polynomial_residue_count
+#print axioms PrimeSigns.LeastFactorWindow.window_occupation
+#print axioms PrimeSigns.LeastFactorWindow.mean_forces_good_starts

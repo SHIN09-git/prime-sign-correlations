@@ -4,7 +4,7 @@
 
 Research supplement to the [third edition](https://github.com/SHIN09-git/prime-sign-correlations/tree/d62b69ce93b4b84372d731a57f56e03177558342), 22 November 2026.
 
-[English PDF](english.pdf) · [中文 PDF](chinese.pdf) · [Divisor and margin proofs](../../formal/PrimeSigns/Margin.lean) · [Factor-count proofs](../../formal/PrimeSigns/FactorProfile.lean)
+[English PDF](english.pdf) · [中文 PDF](chinese.pdf) · [Divisor and margin proofs](../../formal/PrimeSigns/Margin.lean) · [Factor-count proofs](../../formal/PrimeSigns/FactorProfile.lean) · [Least factors and local residues](../../formal/PrimeSigns/LeastFactorWindow.lean)
 
 Let $H=\sqrt X(\log X)^{3/2}$. The all-height first-reversal upper bound would follow from a fixed positive lower bound for the normalized mass of pairs $p,6p\pm1$ with both entries prime in each sufficiently large critical interval. That positive lower bound remains open.
 
@@ -18,6 +18,8 @@ Let $H=\sqrt X(\log X)^{3/2}$. The all-height first-reversal upper bound would f
 | §§9–10 | Six factor counts cover the candidates. Two positive evaluations cancel the three-factor class exactly. Six real evaluations or three real Fourier terms recover the true-pair fraction. A global Liouville estimate is compared with the required local scale. |
 | §11 | On all rough pairs, including squareful values and every factor count, write $A_X(u)$ for the weighted two-point correlation of $u^{\Omega}$ with small primes removed. A uniform prime-pair lower bound is equivalent to $\limsup_X A_X(2t)/A_X(t)<8$ for some fixed window weight and $0<t\le1/3$. |
 | §12 | For each fixed weight the iterated limit, taking the upper limit in height first and then sending $t$ down to zero, is exactly $2^r$. Here $r$ is the first factor count reached with uniform positive mass. There are six possible limits, from 4 through 128 in powers of two. |
+| §§13–15 | For $X^{1/3+\tau}\le Y\le X$, sieving both forms to $X^{1/2-\eta}$ leaves $O_{\tau,a}((\eta+1/\log X)Y/(\log X)^2)$ composite candidates, uniformly for $0\le\eta\le1/2-a$ with $a>0$ fixed. A reciprocal-phase discrepancy bound and a three-dimensional upper sieve give the logarithmic saving at the square-root cutoff. |
+| §16 | For each sign and each sufficiently large scale, a set of starting points of positive relative measure has order $H/(\log X)^2$ prime bases with prime or polynomially separated semiprime partners. The two signs may have different sets of starting points. |
 
 ## Verification
 
@@ -26,15 +28,16 @@ The [Lean source](../../formal/PrimeSigns/Margin.lean) uses the genuine Mathlib 
 ```sh
 cd formal
 lake exe cache get
-lake build PrimeSigns.Margin PrimeSigns.FactorProfile
+lake build PrimeSigns.Margin PrimeSigns.FactorProfile PrimeSigns.LeastFactorWindow
 lake env lean ../supplements/uniform-margin/Audit.lean
 ```
 
-The [axiom audit](Audit.lean) names 21 public declarations across both modules. The first module checks the finite divisor expansions, compatibility of the two moduli, exclusion on neighboring vertices, the exponent inequalities and the original numerator–denominator comparison. The factor-count module checks the prime-pair characterization using Mathlib's prime-factor count, the finite filters, the error bound for every factor count, multiplicativity on positive integers, and the strict threshold eight in the ratio. There are no placeholders in the module. The axiom report contains only `propext`, `Classical.choice` and `Quot.sound`. Its final two declarations prove the moment inequalities and the quantified upper and lower bounds for the limiting ratio from the stated mass hypotheses. To replay the kernels with a matching [lean4checker](https://github.com/leanprover/lean4checker), run one command per module.
+The [axiom audit](Audit.lean) names 29 public declarations across three modules. The first module checks the finite divisor expansions, compatibility of the two moduli, exclusion on neighboring vertices, the exponent inequalities and the original numerator–denominator comparison. The factor-count module checks the prime-pair characterization using Mathlib's prime-factor count, the finite filters, the error bound for every factor count, multiplicativity on positive integers, and the strict threshold eight in the ratio. There are no placeholders in the module. The axiom report contains only `propext`, `Classical.choice` and `Quot.sound`. The last two declarations of the factor-count module prove the moment inequalities and the quantified upper and lower bounds for the limiting ratio from the stated mass hypotheses. The third module checks rough product factorization, a small prime witness for any rough composite, and the exact local sieve density over a prime field. Its real-measure results prove the integral identity for the count in moving windows and the mean-to-measure inequality in §16. Sections 13–16 give the analytic proofs. To replay the kernels with a matching [lean4checker](https://github.com/leanprover/lean4checker), run one command per module.
 
 ```sh
 lake env lean4checker --verbose PrimeSigns.Margin
 lake env lean4checker --verbose PrimeSigns.FactorProfile
+lake env lean4checker --verbose PrimeSigns.LeastFactorWindow
 ```
 
 The analytic sieve applications, square-divisor removal, trilinear estimates, concentration and Euler-product arguments are paper proofs. Section 8 uses [Booker and Browning, §3 and Table 1](https://arxiv.org/abs/1511.00601). The analytic mass hypotheses needed to select the value four in §12 remain unproved.

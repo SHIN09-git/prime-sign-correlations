@@ -1,10 +1,10 @@
 #import "../../paper/layout.typ": layout, lead, sub
 #import "equations.typ" as eq
 #show: layout.with("en","The unresolved margin for affine prime pairs","The uniform prime-pair margin")
-#set document(description:"Critical intervals for affine almost-prime pairs, a seven-factor sieve and the doubling criterion for genuine prime pairs.")
+#set document(description:"Critical intervals for affine prime pairs, least factors near the square root, and prime or separated-semiprime partners.")
 #set text(size:11pt)
 #set par(leading:.5em,spacing:.47em)
-#lead[Research note.][The strict lower bound for genuine prime pairs at every large real starting point remains open. We bound a range of divisor frequencies, exhibit an obstruction for one-point estimates, prove a seven-factor bound in each critical interval, and reduce the missing assertion to a strict ratio below eight for two positive correlations.]
+#lead[Research note.][The strict lower bound for genuine prime pairs at every large real starting point remains open. We prove that sieving up to the square root leaves only $O(H/(log X)^3)$ composite candidates in each critical window. On a positive proportion of windows, many prime bases have prime or separated semiprime partners. We also give a seven-factor lower bound and a doubling criterion for the original problem.]
 
 = The critical interval
 Put $ell=log X$, $H=sqrt(X)ell^(3/2)$ and $f=w^2$, with $w$ a fixed nonzero nonnegative smooth function of compact support in $(0,a)$. Write $I_f=integral_RR f(u) dif u$ and $C_2=product_(p>2)(1-1/(p-1)^2)$. The von Mangoldt function weights every prime power $p^j$ by $log p$. We study
@@ -122,6 +122,9 @@ The model attains equality at the threshold using these one-point controls. Esta
 #include "factor-threshold-en.typ"
 
 #pagebreak()
+#include "least-factor-en.typ"
+
+#pagebreak()
 = Sources and proof verification
 #sub[Analytic sources]
 [1] GPT-6.2 Astra and JIN HANZHE. _Sign correlations of primes in short intervals and their first reversal_, third edition (2026), §§11–12 and Theorem 4D. #link("https://github.com/SHIN09-git/prime-sign-correlations/tree/d62b69ce93b4b84372d731a57f56e03177558342")[Fixed revision].
@@ -139,7 +142,7 @@ The model attains equality at the threshold using these one-point controls. Esta
 [7] K. Ford, _Sieve Methods_ (2023), Selberg's sieve. #link("https://ford126.web.illinois.edu/sieve2023.pdf")[Course notes]. For the classical obstruction see T. Tao, _A general parity problem obstruction_ (2014). #link("https://terrytao.wordpress.com/2014/11/21/a-general-parity-problem-obstruction/")[Article].
 
 #sub[Formal verification]
-The accompanying Lean 4 module proves the genuine finite divisor expansion for both signs, coprimality of the two moduli, exclusion of adjacent marked vertices, the exponent inequalities in §4, and the uniform positive-fraction equivalence in §5 given its two-sided denominator estimate. The analytic estimates, concentration and Euler-product continuation are proved in this note. A second module checks the arithmetic and polynomial identities of §§9–11, the uniform pointwise penalty and complete multiplicativity of the weights. It also proves the moment inequalities and the quantified upper and lower bounds of §12 from its mass hypotheses. The weighted sieve in §8 is a paper proof.
+The accompanying Lean 4 module proves the genuine finite divisor expansion for both signs, coprimality of the two moduli, exclusion of adjacent marked vertices, the exponent inequalities in §4, and the uniform positive-fraction equivalence in §5 given its two-sided denominator estimate. The analytic estimates, concentration and Euler-product continuation are proved in this note. A second module checks the arithmetic and polynomial identities of §§9–11, the uniform pointwise penalty and complete multiplicativity of the weights. It also proves the moment inequalities and the quantified upper and lower bounds of §12 from its mass hypotheses. The weighted sieve in §8 is a paper proof. A third module verifies the least-factor decomposition and the count of forbidden pairs modulo a prime, the moving-window integral and the measure inequality in §16. The short-interval discrepancy estimate, upper sieve and Chen application in §§13–16 are proved in the text.
 
 #sub[Status]
 This public research note records partial results. The all-height strict margin and the corresponding first-reversal upper bound at the critical scale remain open.

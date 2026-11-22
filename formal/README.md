@@ -1,6 +1,6 @@
 # Lean verification
 
-This project uses Lean 4.24.0 and Mathlib revision f897ebcf72cd16f89ab4577d0c826cd14afaafc7. On this research branch the root module imports the ten main-paper modules and both uniform-margin supplement modules. Run from this directory with Elan and Git available.
+This project uses Lean 4.24.0 and Mathlib revision f897ebcf72cd16f89ab4577d0c826cd14afaafc7. On this research branch the root module imports the ten main-paper modules and the three uniform-margin supplement modules. Run from this directory with Elan and Git available.
 
 ~~~sh
 lake exe cache get
@@ -9,7 +9,7 @@ lake env lean Audit.lean
 lake env lean ../supplements/uniform-margin/Audit.lean
 ~~~
 
-The [uniform-margin supplement](../supplements/uniform-margin/README.md) documents its weighted sieve proof and 21 audited declarations. The factor-count module includes the quantified doubling-ratio theorem.
+The [uniform-margin supplement](../supplements/uniform-margin/README.md) documents its weighted sieve proof and 29 audited declarations. The least-factor module proves the composite witness and the count of forbidden residues for the upper sieve. It also checks the real window integral and its positive-measure consequence. The factor-count module includes the quantified doubling-ratio theorem.
 
 | Paper step | Checked declarations in namespace PrimeSigns |
 | --- | --- |

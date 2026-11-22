@@ -10,3 +10,4 @@ import PrimeSigns.UpperWitness
 import PrimeSigns.Residues
 import PrimeSigns.Margin
 import PrimeSigns.FactorProfile
+import PrimeSigns.LeastFactorWindow
