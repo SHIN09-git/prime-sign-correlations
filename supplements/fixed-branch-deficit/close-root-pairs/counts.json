@@ -1,0 +1,100 @@
+{
+  "radii": [
+    "1/V",
+    "4/V",
+    "16/V",
+    "1/sqrt(V)"
+  ],
+  "samples": [
+    {
+      "V": 1024,
+      "a": 1,
+      "d": 1,
+      "Y": 6,
+      "examined": 284,
+      "counts": [
+        0,
+        1,
+        8,
+        14
+      ],
+      "t_values": 14,
+      "records_sha256": "3307d367068d72f21f87556c2416efe5eb4348ae6d4c3854a14455a307b4f5ed"
+    },
+    {
+      "V": 4096,
+      "a": 1,
+      "d": 1,
+      "Y": 6,
+      "examined": 2226,
+      "counts": [
+        0,
+        1,
+        13,
+        53
+      ],
+      "t_values": 53,
+      "records_sha256": "d585dec642f3a3149513eac6016106052c0fe042c24eece6d413f8dafce8cc9b"
+    },
+    {
+      "V": 16384,
+      "a": 1,
+      "d": 1,
+      "Y": 6,
+      "examined": 15576,
+      "counts": [
+        0,
+        6,
+        25,
+        241
+      ],
+      "t_values": 236,
+      "records_sha256": "ec7523ca6702bd5ded9f6fbec805acf38fd75dc4ed50a92f7387551fff35ea05"
+    },
+    {
+      "V": 65536,
+      "a": 1,
+      "d": 1,
+      "Y": 6,
+      "examined": 93960,
+      "counts": [
+        0,
+        12,
+        49,
+        698
+      ],
+      "t_values": 681,
+      "records_sha256": "6e31eb2cca2a670834b69ed07d7e97eb945bf4956c61cfbfad04e45a7b237cc2"
+    },
+    {
+      "V": 16384,
+      "a": 2,
+      "d": 4,
+      "Y": 8,
+      "examined": 19573,
+      "counts": [
+        0,
+        6,
+        38,
+        278
+      ],
+      "t_values": 274,
+      "records_sha256": "d5d66946f4a411591f029e84a2b43c76760bc6b5cbf3da25c9e965ac9ffd34b2"
+    },
+    {
+      "V": 65536,
+      "a": 3,
+      "d": 6,
+      "Y": 18,
+      "examined": 50381,
+      "counts": [
+        0,
+        3,
+        14,
+        417
+      ],
+      "t_values": 243,
+      "records_sha256": "0408cb87f4bdec5cfac47b68790c07b89fa58714b46eaa82bf21d8b395412189"
+    }
+  ]
+}

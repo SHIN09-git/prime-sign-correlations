@@ -33,6 +33,10 @@ $$
 
 **English summary.** These notes count both fixed affine prime-pair branches $(p,6p\pm1)$, with multiplicity when both partners are prime. The last-window and height-averaging certificates join at $2^{32}$ and cover every real height from $X_*$ to $17\cdot2^{28}$. The final note gives a sufficient signed mean estimate for the all-large-height deficit bound. That arithmetic estimate remains open.
 
+## 后续预印本
+
+《固定模数间距下可约二次同余根的近距离配对》研究 $q$ 和 $q+d$ 上的同余根。在两端的因子均大于 $Y\ge ad$ 时，固定乘子 $a$、间距 $d$ 和 $c>0$，整个 $(V,2V]$ 内乘以 $a$ 后相距至多 $c/V$ 的归一化根对数有一个与 $V$ 无关的上界。该结果控制素数配对模型的极近相位部分，更宽范围内的带符号净和仍待估计。[中英文预印本与复算材料](close-root-pairs/README.md)
+
 ## 复核附件
 
 六份原版 PDF 可直接下载。第 3 篇提供八页正文阅读版，其带附件的完整原版可由[六个分卷复原](joint-window-archive/README.md)。第 5 篇原稿直接附有 `verify.py` 和 `checks.json`，其余六篇原稿各附一份 `verification.zip`。每份附件请解到各自的目录，避免同名脚本互相覆盖。部分早期笔记还随附特定引理的 Lean 源码和审计记录。
